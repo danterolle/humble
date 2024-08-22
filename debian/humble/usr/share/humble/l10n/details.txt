@@ -1,0 +1,1475 @@
+# 'humble' (HTTP Headers Analyzer)
+# https://github.com/rfc-st/humble/
+#
+# MIT License
+#
+# Copyright (c) 2020-2024 Rafa 'Bluesman' Faura (rafael.fcucalon@gmail.com)
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+[http_400]
+ Note : The URL returns an error (HTTP code 400, 'Bad Request')
+
+[http_401]
+ Note : The URL returns an error (HTTP code 401, 'Unauthorized')
+
+[http_402]
+ Note : The URL returns an error (HTTP code 402, 'Payment Required')
+
+[http_403]
+ Note : The URL returns an error (HTTP code 403, 'Forbidden')
+
+[http_404]
+ Note : The URL returns an error (HTTP code 404, 'Not Found')
+
+[http_405]
+ Note : The URL returns an error (HTTP code 405, 'Method Not Allowed')
+
+[http_406]
+ Note : The URL returns an error (HTTP code 406, 'Not Acceptable')
+
+[http_407]
+ Note : The URL returns an error (HTTP code 407, 'Proxy Authentication Required')
+
+[http_409]
+ Note : The URL returns an error (HTTP code 409, 'Conflict')
+
+[http_410]
+ Note : The URL returns an error (HTTP code 410, 'Gone')
+
+[http_411]
+ Note : The URL returns an error (HTTP code 411, 'Length Required')
+
+[http_412]
+ Note : The URL returns an error (HTTP code 412, 'Precondition Failed')
+
+[http_413]
+ Note : The URL returns an error (HTTP code 413, 'Payload Too Large')
+
+[http_414]
+ Note : The URL returns an error (HTTP code 414, 'URI Too Long')
+
+[http_415]
+ Note : The URL returns an error (HTTP code 415, 'Unsupported Media Type')
+
+[http_416]
+ Note : The URL returns an error (HTTP code 416, 'Range Not Satisfiable')
+
+[http_417]
+ Note : The URL returns an error (HTTP code 417, 'Expectation Failed')
+
+[http_421]
+ Note : The URL returns an error (HTTP code 421, 'Misdirected Request')
+
+[http_422]
+ Note : The URL returns an error (HTTP code 422, 'Unprocessable Entity')
+
+[http_423]
+ Note : The URL returns an error (HTTP code 423, 'Locked')
+
+[http_424]
+ Note : The URL returns an error (HTTP code 424, 'Failed Dependency')
+
+[http_425]
+ Note : The URL returns an error (HTTP code 425, 'Too Early')
+
+[http_426]
+ Note : The URL returns an error (HTTP code 426, 'Upgrade Required')
+
+[http_428]
+ Note : The URL returns an error (HTTP code 428, 'Precondition Required')
+
+[http_429]
+ Note : The URL returns an error (HTTP code 429, 'Too Many Requests')
+
+[http_431]
+ Note : The URL returns an error (HTTP code 431, 'Request Header Fields Too Large')
+
+[http_451]
+ Note : The URL returns an error (HTTP code 451, 'Unavailable For Legal Reasons')
+
+[server_500]
+ Server error (HTTP code 500, 'Internal Server Error')
+
+[server_501]
+ Server error (HTTP code 501, 'Not Implemented')
+
+[server_502]
+ Server error (HTTP code 502, 'Bad Gateway')
+
+[server_503]
+ Server error (HTTP code 503, 'Service Unavailable')
+
+[server_504]
+ Server error (HTTP code 504, 'Gateway Timeout')
+
+[server_505]
+ Server error (HTTP code 505, 'HTTP Version Not Supported')
+
+[server_506]
+ Server error (HTTP code 506, 'Variant Also Negotiates')
+
+[server_507]
+ Server error (HTTP code 507, 'Insufficient Storage')
+
+[server_508]
+ Server error (HTTP code 508, 'Loop Detected')
+
+[server_510]
+ Server error (HTTP code 510, 'Not Extended')
+
+[server_511]
+ Server error (HTTP code 511, 'Network Authentication Required')
+
+[server_520]
+ Server error usually associated with a CDN (HTTP code 520, 'Unknown error')
+
+[server_521]
+ Server error usually associated with a CDN (HTTP code 521, 'Web server is down')
+
+[server_522]
+ Server error usually associated with a CDN (HTTP code 522, 'Connection timed out')
+
+[server_523]
+ Server error usually associated with a CDN (HTTP code 523, 'Origin is unreachable')
+
+[server_524]
+ Server error usually associated with a CDN (HTTP code 524, 'A timeout occurred')
+
+[server_525]
+ Server error usually associated with a CDN (HTTP code 525, 'SSL handshake failed')
+
+[server_526]
+ Server error usually associated with a CDN (HTTP code 526, 'Invalid SSL certificate')
+
+[server_527]
+ Server error usually associated with a CDN (HTTP code 527, 'Railgun error')
+
+[server_530]
+ Server error usually associated with a CDN (HTTP code 530, 'Review accompanying 1XXX error')
+
+[ixuacom_h]
+ X-UA-Compatible (Deprecated Header)
+
+[ixuacom]
+ Unless you need compatibility with very old versions of Internet Explorer (e.g. 6 to 8),
+ remove this header and declare correctly the doctype.
+ Ref: https://getoutofmyhead.dev/x-ua-compatible/
+
+[ixcspr_h]
+ X-Content-Security-Policy-Report-Only (Deprecated Header)
+
+[ixwcspr_h]
+ X-Webkit-CSP-Report-Only (Deprecated Header)
+
+[ixcspr]
+ This header is deprecated. Use instead "Content-Security-Policy-Report-Only".
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy-Report-Only
+
+[ionloc_h]
+ Onion-Location (Potentially Unsafe Header)
+
+[ionloc]
+ Configure .onion domains correctly and check their limitations.
+ Ref: https://community.torproject.org/onion-services/advanced/onion-location/
+ Ref: https://forum.torproject.net/t/eventual-support-for-https-dns-records/4799
+
+[ip3p_h]
+ P3P (Deprecated Header)
+
+[ip3p]
+ This header is deprecated. Use cookies, consents and regulations (e.g. GDPR) instead.
+ Ref: https://webhint.io/docs/user-guide/hints/hint-no-p3p/
+
+[ixrobv_h]
+ X-Robots-Tag (No Valid Directives)
+
+[ixrobv]
+ Include at least one valid directive.
+ Ref: https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag
+ Ref: https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240
+
+[ixpermcross_h]
+ X-Permitted-Cross-Domain-Policies (No Valid Directives)
+
+[ixpermcross]
+ Include at least one valid directive.
+ Ref: https://getbutterfly.com/security-headers-a-concise-guide/
+ Ref: https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/xdomain.html
+
+[ixpermcrossd_h]
+ X-Permitted-Cross-Domain-Policies (Duplicated Values)
+
+[ixpermcrossd]
+ This header, or its values, may be duplicated.
+ Ref: https://getbutterfly.com/security-headers-a-concise-guide/
+ Ref: https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/xdomain.html
+
+[icsd_h]
+ Clear-Site-Data (Ignored Header)
+
+[icsdn_h]
+ Clear-Site-Data (No Valid Directives)
+
+[icsd]
+ This header is ignored by the browser when accessing via HTTP.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Clear-Site-Data
+
+[icsdn]
+ Include at least one valid directive.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Clear-Site-Data
+
+[icencod]
+ Include at least one valid directive.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Encoding
+
+[icencod_h]
+ Content-Encoding (No Valid Directives)
+
+[ictlg_h]
+ Content-Type (Deprecated Values)
+
+[ictlg]
+ JavaScript content should always be served using the MIME type 'text/javascript'.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types
+ Ref: https://www.rfc-editor.org/rfc/rfc9239.html
+
+[ictlhtml_h]
+ Content-Type (Non-HTML MIME type)
+
+[ictlhtml]
+ The URL is not an HTML document. This analysis may not apply in its entirety.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
+
+[ictlchar_h]
+ Content-Type (Unsafe Value)
+
+[ictlchar]
+ The 'charset' attribute is necessary to prevent XSS in HTML pages.
+ Ref: https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html
+
+[icrch_h]
+ Critical-CH (Ignored Header)
+
+[icrch]
+ This header is ignored by the browser when accessing via HTTP.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Critical-CH
+
+[idig_h]
+ Digest (Deprecated Header)
+
+[idig]
+ This header is deprecated.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Digest
+
+[ixach_h]
+ Accept-CH (Ignored Header)
+
+[ixachd_h]
+ Accept-CH (Deprecated Values)
+
+[ixach]
+ This header is ignored by the browser when accessing via HTTP.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-CH
+
+[ixachd_s]
+ These values are deprecated: 
+
+[ixachd]
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-CH
+
+[ixacl_h]
+ Accept-CH-Lifetime (Deprecated Header)
+
+[ixacld]
+ This header is deprecated.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-CH-Lifetime
+
+[icred_h]
+ Access-Control-Allow-Credentials (Incorrect Values)
+
+[icred]
+ The only valid value for this header is 'true'.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Credentials
+
+[ixcdpr_h]
+ Content-DPR (Deprecated Header)
+
+[ixcdprd]
+ This header is deprecated.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-DPR
+
+[ickeep_h]
+ Keep-Alive (Ignored Header)
+
+[ickeep]
+ This header is ignored if the value of the 'Connection' header is not 'keep-alive'.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Keep-Alive
+
+[ixlalloc_h]
+ Large-Allocation (Deprecated Header)
+
+[ixallocd]
+ This header is deprecated.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Large-Allocation
+
+[inel_h]
+ NEL (No Valid Directives)
+
+[iobsb_h]
+ Observe-Browsing-Topics (No Valid Directives)
+
+[inel]
+ Include at least one valid directive.
+ Ref: https://w3c.github.io/network-error-logging/#nel-response-header
+
+[iobsb]
+ Include at least one valid directive.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Observe-Browsing-Topics
+
+[inelm_h]
+ NEL (Missing Directives)
+
+[inelm]
+ The 'report_to' and 'max_age' directives are mandatory.
+ Ref: https://w3c.github.io/network-error-logging/#nel-response-header
+
+[ixtk_h]
+ Tk (Deprecated Header)
+
+[ixtkd]
+ This header is deprecated.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Tk
+
+[ixwandig_h]
+ Want-Digest (Deprecated Header)
+
+[ixwandig]
+ This header is deprecated.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Want-Digest
+
+[ixwar_h]
+ Warning (Deprecated Header)
+
+[ixward]
+ This header is deprecated.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Warning
+
+[ixvary_h]
+ Vary (Potentially Unsafe Header)
+
+[ixvary]
+ The values of this header may expose others, facilitating attacks if user input is accepted.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Vary
+ Ref: https://www.yeswehack.com/fr/learn-bug-bounty/http-header-exploitation
+
+[no_sec_headers]
+ No HTTP security headers are enabled.
+
+[icsi_d_r]
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
+
+[itrailer_d_r]
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Trailer
+
+[icsiro_d]
+ Content-Security-Policy-Report-Only (Deprecated Directives)
+
+[icsiro_d_r]
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy-Report-Only
+
+[icsi_d_s]
+ Avoid using deprecated directives: 
+
+[itrailer_d_s]
+ Avoid using disallowed directives: 
+
+[imethods_s]
+ Make sure these enabled HTTP methods are needed: 
+
+[icoep_h]
+ Cross-Origin-Embedder-Policy (No Valid Directives)
+
+[icoep]
+ Include at least one valid directive.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy
+
+[icoop_h]
+ Cross-Origin-Opener-Policy (No Valid Directives)
+
+[icoop]
+ Include at least one valid directive.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy
+
+[icorp_h]
+ Cross-Origin-Resource-Policy (No Valid Directives)
+
+[icorp]
+ Include at least one valid directive.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy
+
+[icsp_h]
+ Content-Security-Policy (Unsafe Values)
+
+[icspi_h]
+ Content-Security-Policy (Unsafe Directive)
+
+[imethods_h]
+ Access-Control-Allow-Methods (Insecure Methods)
+
+[iaccess_h]
+ Access-Control-Allow-Origin (Unsafe Values)
+
+[iacessma_h]
+ Access-Control-Max-Age (Excessive Value)
+
+[imethods_hh]
+ Allow (Insecure Methods)
+
+[icache_h]
+ Cache-Control (Recommended Values)
+
+[icachev_h]
+ Cache-Control (No Valid Directives)
+
+[icsi_h]
+ Content-Security-Policy (No Valid Directives)
+
+[icsi_d]
+ Content-Security-Policy (Deprecated Directives)
+
+[icsn_h]
+ Content-Security-Policy (Incorrect Values)
+
+[icsh_h]
+ Content-Security-Policy (Insecure Schemes)
+
+[icsipa_h]
+ Content-Security-Policy (IP detected)
+
+[icsw_h]
+ Content-Security-Policy (Too Permissive Sources)
+
+[icsu_h]
+ Content-Security-Policy (Unsafe Funcionality)
+
+[icsnces_h]
+ Content-Security-Policy (Unsafe Nonce)
+
+[ieta_h]
+ Etag (Potentially Unsafe Header)
+
+[iexct_h]
+ Expect-CT (Deprecated Header)
+
+[iexpi_h]
+ Expires (Ignored Header)
+
+[iffea_h]
+ Feature-Policy (Deprecated Header)
+
+[ihttp_h]
+ HTTP (URL Via Unsafe Scheme)
+
+[ifpoln_h]
+ Permissions-Policy (No Valid Features)
+
+[ifnvarys_h]
+ No-Vary-Search (No Valid Directives)
+
+[ifpol_h]
+ Permissions-Policy (Too Permissive Value)
+
+[ifpoli_h]
+ Permissions-Policy (Incorrect Value)
+
+[ifpold_h]
+ Permissions-Policy (Deprecated Features)
+
+[iprag_h]
+ Pragma (Deprecated Header)
+
+[iprxauthn_h]
+ Proxy-Authenticate (No Valid Directives)
+
+[iprxauth_h]
+ Proxy-Authenticate (Unsafe Value)
+
+[ipkp_h]
+ Public-Key-Pins (Deprecated Header)
+
+[ipkpr_h]
+ Public-Key-Pins-Report-Only (Deprecated Header)
+
+[iref_h]
+ Referrer-Policy (Recommended Values)
+
+[islogin_h]
+ Set-Login (No Valid Directives)
+
+[irefi_h]
+ Referrer-Policy (Unsafe Value)
+
+[irefn_h]
+ Referrer-Policy (Incorrect Value)
+
+[irepe_h]
+ Reporting-Endpoints (Ignored Value)
+
+[irepdig_h]
+ Repr-Digest (No Valid Directives)
+
+[irepdigi_h]
+ Repr-Digest (Unsafe Values)
+
+[itim_h]
+ Server-Timing (Potentially Unsafe Header)
+
+[iset_h]
+ Set-Cookie (Insecure Attributes)
+
+[iseti_h]
+ Set-Cookie (Insecure Scheme)
+
+[iseti_m]
+ Set-Cookie (Missing attribute)
+
+[ispref_m]
+ Set-Cookie (Cookie Prefixes)
+
+[ismap_m]
+ SourceMap (Unsafe Funcionality)
+
+[ispec_m]
+ Speculation-Rules (Potentially Unsafe Header)
+
+[isdyn_h]
+ Strict-Dynamic (Incorrect Header)
+
+[ists_h]
+ Strict-Transport-Security (Recommended Values)
+
+[istsr_h]
+ Strict-Transport-Security (Required Values)
+
+[istsd_h]
+ Strict-Transport-Security (Duplicated Values)
+
+[ihsts_h]
+ Strict-Transport-Security (Ignored Header)
+
+[itao_h]
+ Timing-Allow-Origin (Potentially Unsafe Header)
+
+[itrailer_h]
+ Trailer (Disallowed Directives)
+
+[ictrf_h]
+ Transfer-Encoding (No Valid Directives)
+
+[islmodei_h]
+ Supports-Loading-Mode (Ignored Header)
+
+[islmode_h]
+ Supports-Loading-Mode (No Valid Directives)
+
+[isurrmode_h]
+ Surrogate-Control (No Valid Directives)
+
+[iorigcluster_h]
+ Origin-Agent-Cluster (No Valid Directives)
+
+[ihbas_h]
+ WWW-Authenticate (Unsafe Value)
+
+[ixcsp_h]
+ X-Content-Security-Policy (Deprecated Header)
+
+[ictpd_h]
+ X-Content-Type-Options (Duplicated Values)
+
+[ictp_h]
+ X-Content-Type-Options (Incorrect Value)
+
+[ixdp_h]
+ X-DNS-Prefetch-Control (Potentially Unsafe Header)
+
+[ixdow_h]
+ X-Download-Options (Deprecated Header)
+
+[ixfo_h]
+ X-Frame-Options (Duplicated Values)
+
+[ixfod_h]
+ X-Frame-Options (Deprecated Values)
+
+[ixfoi_h]
+ X-Frame-Options (Incorrect Values)
+
+[ixpad_h]
+ X-Pad (Deprecated Header)
+
+[ixpermcrossu_h]
+ X-Permitted-Cross-Domain-Policies (Unsafe Value)
+
+[ixpb_h]
+ X-Pingback (Unsafe Value)
+
+[ixrob_h]
+ X-Robots-Tag (Unsafe Value)
+
+[ixrun_h]
+ X-Runtime (Unsafe Value)
+
+[ixsrc_h]
+ X-SourceMap (Deprecated Header)
+
+[ixwcsp_h]
+ X-Webkit-CSP (Deprecated Header)
+
+[ixxp_h]
+ X-XSS-Protection (Unsafe Value)
+
+[ixxpdp_h]
+ X-XSS-Protection (Deprecated Header)
+
+[ixxpd_h]
+ X-XSS-Protection (Duplicated Values)
+
+[pdf_title]
+'humble' (HTTP Headers Analyzer)
+
+[pdf_footer]
+Page 
+
+[pdf_footer2]
+ of
+
+[pdf_meta_title]
+HTTP headers analysis of
+
+[pdf_meta_keywords]
+HTTP Headers, Analyzer, Analysis, Cybersecurity, Security-scanner, Security-Tools, Header-Parser
+
+[pdf_meta_language]
+en-US
+
+[pdf_meta_subject]
+HTTP headers analysis
+
+[0section_s]
+0.- Analysis Info
+
+[0headers_s]
+HTTP Response Headers
+
+[1missing_s]
+1.- Missing Headers
+
+[2fingerprint_s]
+2.- Fingerprint Headers
+
+[3depinsecure_s]
+3.- Deprecated/Insecure Headers
+
+[4empty_s]
+4.- Empty Headers
+
+[5compat_s]
+5.- Browser Compatibility
+
+[security_guides]
+
+ Guidelines for enabling security HTTP response headers on popular servers/services:
+
+[e_schema]
+ Error: No "http" or "https" schema supplied. Check syntax and try again.
+
+[e_invalid]
+ Error: The URL is not valid. Check syntax and try again.
+
+[server_serror]
+ Server error; wait a while and try again.
+
+[e_404]
+ Error: URL not found. Check syntax and try again.
+
+[e_timeout]
+ Error: URL is taking too long to respond. Wait a while and try again.
+
+[report]
+ Report saved to 
+
+[0section]
+[0. Info]
+
+[0headers]
+[HTTP Response Headers]
+
+[1missing]
+[1. Missing HTTP Security Headers]
+
+[2fingerprint]
+[2. Fingerprint HTTP Response Headers]
+
+[3depinsecure]
+[3. Deprecated HTTP Response Headers/Protocols and Insecure Values]
+
+[4empty]
+[4. Empty HTTP Response Headers Values]
+
+[5compat]
+[5. Browser Compatibility for Enabled HTTP Security Headers]
+
+[analysis]
+ Analyzing URL, please wait ...
+
+[unreliable_analysis]
+ (The analysis is taking longer than usual -may be due to network connectivity, WAF, etc- and may not be reliable)
+
+[unreliable_analysis_note]
+ Note : The analysis may not be reliable because of the time it took for the URL to respond.
+
+[limited_analysis_note]
+ Note : Exporting to CSV/JSON is currently limited to a brief analysis
+
+[analysis_redirects_note]
+ Note : The exact URL will be analyzed, without following redirects.
+
+[analysis_skipped_note]
+ Note : Omitted missing and deprecated/insecure checks for
+
+[analysis_output]
+ Analyzing URL and saving the report, please wait ...
+
+[analysis_date]
+ Date :
+
+[python_version]
+
+ Error: This tool requires, at least, Python 3.9.
+ Ref: https://github.com/rfc-st/humble#installation--update
+
+[no_warnings]
+ Nothing to report, all seems OK!
+
+[mcache]
+ Directives for caching in both requests and responses.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control
+
+[mcsd]
+ Clears browsing data (cookies, storage, cache) associated with the requesting website.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Clear-Site-Data
+
+[mctype]
+ Indicates the original media type of the resource.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type
+
+[mcoe]
+ Prevents documents and workers from loading non-same-origin requests unless allowed.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy
+
+[mcop]
+ Prevent other websites from gaining arbitrary window references to a page.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy
+
+[mcor]
+ Protect servers against certain cross-origin or cross-site embedding of the returned source.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)
+
+[mcsp]
+ Detect and mitigate Cross Site Scripting (XSS) and data injection attacks, among others.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
+
+[mpermission]
+ Previously called "Feature-Policy", allow and deny the use of browser features.
+ Ref: https://scotthelme.co.uk/goodbye-feature-policy-and-hello-permissions-policy/
+
+[mnel]
+ Enables web applications to declare a reporting policy to report errors.
+ Ref: https://scotthelme.co.uk/network-error-logging-deep-dive/
+
+[mreferrer]
+ Controls how much referrer information should be included with requests.
+ Ref: https://scotthelme.co.uk/a-new-security-header-referrer-policy/
+
+[msts]
+ Tell browsers that it should only be accessed using HTTPS, instead of using HTTP.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security
+
+[mxcto]
+ Indicate that MIME types in the "Content-Type" headers should be followed.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options
+
+[mxfo]
+ Prevents clickjacking attacks, limiting sources of embedded content.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
+
+[mxpcd]
+ Limit which data external resources (e.g. Adobe Flash/PDF documents), can access on the domain.
+ Ref: https://owasp.org/www-project-secure-headers/#div-headers
+
+[iaccess]
+ Review the values '*' or 'null' regarding your Cross-origin resource sharing requirements.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin
+
+[iaccessma]
+ The value of this header is higher than the maximum limited by popular browsers.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Max-Age
+
+[icache]
+ Enable 'no-cache', 'no-store', and 'must-revalidate' if there are sensitive data.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control
+
+[icachev]
+ Include at least one valid directive.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control
+
+[icsp]
+ 'unsafe-inline' and 'unsafe-eval' negate most of the security benefits provided by this header.
+ Ref: https://csper.io/blog/no-more-unsafe-inline
+ Ref: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval
+
+[icspi]
+ 'upgrade-insecure-requests' without 'HSTS' header could lead to SSL Stripping attacks.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
+ Ref: https://www.ssldragon.com/blog/ssl-stripping/
+
+[icsi]
+ Include at least one valid directive.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
+
+[icsn]
+ '=' could be an incorrect value in the definition of this header.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
+
+[icsh]
+ Do not allow insecure, unencrypted schemes: 
+
+[icsh_b]
+ Ref: https://www.cloudflare.com/learning/ssl/why-is-http-not-secure/
+ Ref: https://http.dev/wss
+
+[icsw]
+ Limit these permissive origins: 
+
+[icsu]
+ Avoid using 'unsafe-hashes', and move all the logic associated with it to a JavaScript file.
+ Ref: https://content-security-policy.com/unsafe-hashes/
+
+[icsnces]
+ Nonces should have at least 128 bits of entropy (32 hex/24 base64 characters).
+ Ref: https://content-security-policy.com/nonce/
+
+[icsipa]
+ The standards discourage IP addresses as values (except for 127.0.0.1).
+ Ref: https://www.w3.org/TR/CSP2/#match-source-expression
+ Ref: https://www.w3.org/TR/CSP3/#match-hosts
+
+[ictp]
+ The only valid value is 'nosniff'.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options
+
+[ictpd]
+ This header, or its values, may be duplicated.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options
+
+[ieta]
+ Although unlikely to be exploited, this header should not include inode information.
+ Ref: https://www.pentestpartners.com/security-blog/vulnerabilities-that-arent-etag-headers/
+
+[iffea]
+ "Feature-Policy" has been renamed to "Permissions-Policy".
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy
+
+[ifnvarys]
+ Include at least one valid directive.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/No-Vary-Search
+
+[ifpoln]
+ Include at least one valid feature.
+ Ref: https://github.com/w3c/webappsec-permissions-policy/blob/main/features.md
+ Ref: https://csplite.com/fp/
+
+[ifpol]
+ The value '(*)' allows the feature in this document and iframes, regardless of their origin.
+ Ref: https://developer.chrome.com/en/docs/privacy-sandbox/permissions-policy/
+
+[ifpoli]
+ Use '=()' instead of 'none'.
+ Ref: https://scotthelme.co.uk/goodbye-feature-policy-and-hello-permissions-policy/
+
+[ifpold_h_s]
+ Avoid using deprecated features: 
+
+[ifpold]
+ Ref: https://github.com/w3c/webappsec-permissions-policy/blob/main/features.md
+
+[ihttp]
+ You are analyzing a domain via HTTP, in which the communications are not encrypted.
+ Ref: https://www.cloudflare.com/learning/ssl/why-is-http-not-secure/
+
+[imethods]
+ Ref: https://appcheck-ng.com/http-verbs-security-risks/
+
+[icsw_b]
+ Ref: https://content-security-policy.com/
+
+[iprag]
+ This header is deprecated.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma
+
+[ipkp]
+ This header is deprecated.
+ Ref: https://scotthelme.co.uk/hpkp-is-no-more/
+
+[iprxauthn]
+ Include at least one valid directive.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Proxy-Authenticate
+
+[itrf]
+ Include at least one valid directive.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Transfer-Encoding
+
+[iref]
+ Use 'strict-origin' or 'strict-origin-when-cross-origin' if there are sensitive resources.
+ Or fall back to 'no-referrer-when-downgrade' or even 'no-referrer'.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
+
+[islogin]
+ Include at least one valid directive.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Login
+
+[irefi]
+ 'unsafe-url' will leak potentially-private information from HTTPS URLs to insecure origins.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
+
+[irefn]
+ Include at least one valid directive.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
+
+[irepe]
+ Insecure endpoints ('http:') are ignored.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Reporting-Endpoints
+
+[irepdig]
+ Include at least one valid directive.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Repr-Digest
+
+[irepdigi]
+ Insecure algorithms should not be used as collisions can be forced.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Repr-Digest
+
+[iset]
+ Enable 'Secure' and 'HttpOnly': to send it via HTTPS and not be accessed by client APIs.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie
+
+[iseti]
+ 'Secure' cookies should be sent via HTTPS (except on localhost).
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie
+
+[isetm]
+ 'SameSite=None' cookies must also be set with the 'Secure' attribute.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie
+
+[ispref]
+ '__Host-' and '__Secure-' cookies must be served from HTTPS and have the 'secure' flag.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie
+
+[ismap]
+ This header can expose sensitive information about the original source code.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/SourceMap
+
+[ispec]
+ Make sure this header do not allow unsafe speculative loading conditions.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Speculation-Rules
+ Ref: https://developer.mozilla.org/en-US/docs/Web/API/Speculation_Rules_API
+
+[isdyn]
+ This is not a header, but a keyword of the 'Content-Security-Policy' header.
+ Ref: https://content-security-policy.com/strict-dynamic/
+
+[ists]
+ Add 'includeSubDomains' and 'max-age' (with 31536000 -one year- as minimum).
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security
+ Ref: https://https.cio.gov/hsts/
+
+[istsr]
+ 'preload' requires 'includeSubDomains' and 'max-age' (with 31536000 -one year- as minimum).
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security
+
+[istsd]
+ This header, or its values, may be duplicated.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security
+
+[islmodei]
+ This header is ignored by the browser when accessing via HTTP.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Supports-Loading-Mode
+
+[islmode]
+ Include at least one valid directive.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Supports-Loading-Mode
+
+[isurrmode]
+ Include at least one valid directive.
+ Ref: https://www.w3.org/TR/edge-arch/
+
+[iorigcluster]
+ The only valid value is '?1'.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Origin-Agent-Cluster
+
+[ihsts]
+ This header is ignored by the browser when accessing via HTTP.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security
+
+[ihbas]
+ The "Basic" HTTP authentication scheme sends base64-encoded credentials, without encrypting them.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication
+
+[iexct]
+ This header is deprecated.
+ Ref: https://chromestatus.com/feature/6244547273687040
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expect-CT
+
+[iexpi]
+ Header ignored by the directives 'max-age' or 's-maxage' in the header that controls the cache.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expires
+
+[itao]
+ The value '*' gives permission to any origin to see timing resources.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin
+
+[itim]
+ This header should not expose sensitive application or infrastructure information.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Server-Timing
+
+[ixpermcrossu]
+ The value 'all' could permit any cross-domain requests from Flash and PDF documents.
+ Ref: https://getbutterfly.com/security-headers-a-concise-guide/
+ Ref: https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/xdomain.html
+
+[ixcsp]
+ This header is deprecated. Use instead "Content-Security-Policy".
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
+
+[ixdp]
+ Enabling DNS prefetching could bypass "Content-Security-Policy" directives.
+ Ref: https://blog.compass-security.com/2016/10/bypassing-content-security-policy-with-dns-prefetching/
+
+[ixdow]
+ This header is specific to Internet Explorer 8 (discontinued in 2020).
+ Ref: https://webtechsurvey.com/response-header/x-download-options
+ Ref: https://docs.microsoft.com/en-us/lifecycle/products/internet-explorer-8
+
+[ixfo]
+ This header, or its values, may be duplicated.
+ Advice: Replace this header with the CSP 'frame-ancestors' directive.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
+
+[ixfod]
+ "ALLOW-FROM" no longer works in modern browsers.
+ Advice: Replace this header with the CSP 'frame-ancestors' directive.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
+
+[ixfodi]
+ The only values allowed for this header are "DENY" or "SAMEORIGIN".
+ Advice: Replace this header with the CSP 'frame-ancestors' directive.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
+
+[ixpad]
+ This header is deprecated since 2008.
+ Ref: https://stackoverflow.com/questions/8711584/x-pad-avoid-browser-bug-header-added-by-apache
+
+[ixpb]
+ xmlrpc.php can introduce vulnerabilities; has been superseded by the WordPress REST API.
+ Ref: https://kinsta.com/blog/xmlrpc-php/
+
+[ixrob]
+ The value 'all' implies no restrictions for indexing or serving content, regarding search engines.
+ Could pose a security risk: indexing of exposed administration panels, sensitive information, etc.
+ Ref: https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag
+
+[ixrun]
+ The value of this header could allow valid user harvesting attacks.
+ Ref: https://www.virtuesecurity.com/kb/x-runtime-header-timing-attacks/
+
+[ixsrc]
+ This header is deprecated. Use instead "SourceMap".
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/SourceMap
+
+[ixxp]
+ To mitigate XSS attacks, restrictively use the "Content-Security-Policy" header.
+ Ref: https://auth0.com/blog/defending-against-xss-with-csp/
+
+[ixxpdp]
+ This header is deprecated in the three major web browsers.
+ Instead, use the "Content-Security-Policy" header restrictively.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection
+
+[ixxpd]
+ This header, or its values, may be duplicated.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection
+
+[aemp]
+ Empty HTTP headers (and are therefore considered disabled):
+
+[afgp]
+ These headers can leak information about software, versions, hostnames or IP addresses:
+
+[aisc]
+ The following headers/protocols are deprecated or their values may be considered unsafe:
+
+[ru_analysis_message]
+
+ 'humble' will not analyze Russian domains (or allow their use from Russia) until it withdraws from Ukraine.
+ Please, read this: https://github.com/rfc-st/humble/blob/master/CODE_OF_CONDUCT.md#update-20220326
+
+[missing_cnt]
+  Missing headers:              
+
+[fng_cnt]
+  Fingerprint headers:          
+
+[insecure_cnt]
+  Deprecated/Insecure headers:  
+
+[empty_cnt]
+  Empty headers:                
+
+[total_cnt]
+  Findings to review:           
+
+[analysis_time]
+Analysis done in 
+
+[analysis_time_sec]
+ seconds! (changes with respect to the last analysis in parentheses)
+
+[first_analysis]
+First Analysis
+
+[stats_analysis]
+Statistics of
+
+[global_stats_analysis]
+Global statistics of all analyses performed
+
+[total_analysis]
+ Analyses done   
+
+[first_analysis_a]
+ First analysis  
+
+[latest_analysis]
+ Latest analysis 
+
+[urls]
+URLs
+
+[most_analyzed]
+ Most analyzed                     
+
+[least_analyzed]
+ Least analyzed                    
+
+[most_warnings]
+ Most Warnings                     
+
+[least_warnings]
+ Least Warnings                    
+
+[most_missing]
+ Most Missing Headers              
+
+[least_missing]
+ Least Missing Headers             
+
+[most_fingerprints]
+ Most Fingerprint Headers          
+
+[least_fingerprints]
+ Least Fingerprint Headers         
+
+[most_insecure]
+ Most Insecure/Deprecated Headers  
+
+[least_insecure]
+ Least Insecure/Deprecated Headers 
+
+[most_empty]
+ Most Empty Headers                
+
+[least_empty]
+ Least Empty Headers               
+
+[best_analysis]
+ Best analysis   
+
+[worst_analysis]
+ Worst analysis  
+
+[total_global_analysis]
+ URLs analyzed   
+
+[total_warnings]
+(Warnings: 
+
+[no_analysis]
+Error: To use this option ('-a') you must have run at least one scan against that URL.
+
+[no_global_analysis]
+Error: To use this option ('-a') you must have run at least one scan against any URL.
+
+[no_missing]
+ Without missing headers                             
+
+[no_fingerprint]
+ Without fingerprint headers                         
+
+[no_ins_deprecated]
+ Without insecure/deprecated headers/protocols       
+
+[no_empty]
+ Without empty headers                               
+
+[analysis_year_month]
+Timeline
+
+[analysis_y]
+Analysis
+
+[average_warnings]
+ Warnings per analysis                               
+
+[average_warnings_year]
+ Warnings per year                                   
+
+[average_miss]
+ Missing headers per analysis                        
+
+[average_fng]
+ Fingerprint headers per analysis                    
+
+[average_dep]
+ Insecure/deprecated headers/protocols per analysis  
+
+[average_ety]
+ Empty headers per analysis                          
+
+[averages]
+Averages
+
+[main]
+Main
+
+[empty_fng]
+ (No value)
+
+[highlights]
+Highlights
+
+[month_01]
+ January
+
+[month_02]
+ February
+
+[month_03]
+ March
+
+[month_04]
+ April
+
+[month_05]
+ May
+
+[month_06]
+ June
+
+[month_07]
+ July
+
+[month_08]
+ August
+
+[month_09]
+ September
+
+[month_10]
+ October
+
+[month_11]
+ November
+
+[month_12]
+ December
+
+[humble_not_recent]
+ Your version of 'humble' is not recent
+
+[humble_recent]
+ You have a recent version of 'humble' :).
+
+[github_humble]
+ Check for updates at https://github.com/rfc-st/humble/
+
+[update_error]
+ There was an error checking if you are using the latest version; wait a few minutes and try again.
+
+[fng_stats]
+ HTTP fingerprint headers statistics
+
+[fng_source]
+ (source file: 'additional/fingerprint.txt')
+
+[fng_add]
+ Headers related to
+
+[fng_zero]
+ No headers found related to
+
+[fng_zero_2]
+ Tip: quote multiple words to search for exact matches; e.g. "Microsoft Azure Storage"
+
+[fng_top]
+ Top 20 groups of fingerprint headers in relation to the
+
+[fng_top_2]
+ headers of the source file.
+
+[ua_available]
+ Available User-Agents
+
+[ua_source]
+ (source: 'additional/user_agents.txt')
+
+[ua_invalid]
+Error: That User-Agent ID does not exist; check the available ones with '-ua 0'
+
+[windows_ssltls]
+
+To run an SSL/TLS scan on Windows (via 'testssl.sh') I recommend one of these options:
+
+1. Cygwin
+
+- Download https://github.com/drwetter/testssl.sh/releases
+- Download https://www.cygwin.com/install.html
+- Run Cygwin installer and choose the packages you need, including the 'bash' package
+- Start the Cygwin Terminal
+- Change to the directory where 'testssl.sh' is located and run the analysis using 'bash':
+-- Ex. bash testssl.sh -f -g -p -U -s --hints https://www.spacex.com
+
+2. MSYS2
+
+- Download https://github.com/drwetter/testssl.sh/releases
+- Download https://www.msys2.org/
+- Run MSYS2 installer and follow the installation instructions
+- Start the MSYS2 MinGW 64-bit terminal
+- Change to the directory where 'testssl.sh' is located and run the analyisis using 'bash':
+-- Ex. bash testssl.sh -f -g -p -U -s --hints https://www.spacex.com
+
+3. WSL (Windows Subsystem for Linux)
+
+- Download https://github.com/drwetter/testssl.sh/releases
+- Follow WSL instructions: https://learn.microsoft.com/en-us/windows/wsl/install
+- Open the installed Linux distribution from the Start menu or use 'wsl' from the Command Prompt
+- Change to the directory where 'testssl.sh' is located and run the analyisis using 'bash':
+-- Ex. bash testssl.sh -f -g -p -U -s --hints https://www.spacex.com
+
+[args_notestssl]
+Error: '-e' requires the path of 'testssl.sh' and '-u'.
+
+[args_lang]
+Error: '-l' requires also '-u' or '-a'.
+
+[args_useragent]
+Error: '-ua' requires also '-u'.
+
+[args_several]
+Error: '-b', '-df', '-'o', '-r' and '-s' requires also '-u'.
+
+[args_csv_json]
+Error: '-o csv' and '-o json' requires '-b'.
+
+[notestssl_file]
+Error: 'testssl.sh' is not found in that PATH.
+
+[notestssl_path]
+Error: The PATH for 'testssl.sh' is incorrect.
+
+[args_nooutputfmt]
+Error: '-op' requires '-o'.
+
+[args_skipped]
+Error: '-s' requires at least the name of one HTTP response header.
+
+[args_skipped_unknown]
+Error: Remove these HTTP headers from the '-s' parameter as 'humble' does not check them: 
+
+[args_noexportpath]
+Error: The indicated PATH does not exist 
+
+[args_nowr]
+Error: This user does not have write permissions on the path 
+
+[args_path_traversal]
+Error: The indicated PATH seems wrong
+
+[csv_section]
+Section
+
+[csv_values]
+Values
+
+[epilog_content]
+examples:
+  -a -l es                    Shows statistics (in Spanish) of the analysis performed against all URLs
+  -f Google                   Shows HTTP fingerprint headers related to the term 'Google'
+  -u URL -a                   Shows statistics of the analysis performed against the URL
+  -u URL -b                   Analyzes the URL and reports overall findings
+  -u URL -b -o csv            Analyzes the URL and exports overall findings to CSV
+  -u URL -l es                Analyzes the URL and reports (in Spanish) detailed findings
+  -u URL -o pdf               Analyzes the URL and exports detailed findings to PDF
+  -u URL -r                   Analyzes the URL and reports detailed findings along with HTTP response headers
+  -u URL -s ETag NEL          Analyzes the URL and skips 'deprecated/insecure' and 'missing' checks for 'ETag' and 'NEL' headers
+  -u URL -ua 4                Analyzes the URL using the fourth User-Agent of 'additional/user_agents.txt'
+
+[fng_value]
+Value:
+
+[export_filename]
+ File : 
+
+[d_grade]
+  Analysis Grade:               D (Review 'Deprecated/Insecure headers')
+
+[c_grade]
+  Analysis Grade:               C (Review 'Missing headers')
+
+[b_grade]
+  Analysis Grade:               B (Review 'Fingerprint headers')
+
+[a_grade]
+  Analysis Grade:               A (Review 'Empty headers')
+
+[perfect_grade]
+  Analysis Grade:               A+ (Incredible, congratulations!)
+
+[testssl_error]
+Error running TLS/SSL analysis.

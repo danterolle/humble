@@ -1,0 +1,1465 @@
+# 'humble' (HTTP Headers Analyzer)
+# https://github.com/rfc-st/humble/
+#
+# MIT License
+#
+# Copyright (c) 2020-2024 Rafa 'Bluesman' Faura (rafael.fcucalon@gmail.com)
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+[http_400]
+ Nota : La URL devuelve un error (Código HTTP 400, 'Bad Request')
+
+[http_401]
+ Nota : La URL devuelve un error (Código HTTP 401, 'Unauthorized')
+
+[http_402]
+ Nota : La URL devuelve un error (Código HTTP 402, 'Payment Required')
+
+[http_403]
+ Nota : La URL devuelve un error (Código HTTP 403, 'Forbidden')
+
+[http_404]
+ Nota : La URL devuelve un error (Código HTTP 404, 'Not Found')
+
+[http_405]
+ Nota : La URL devuelve un error (Código HTTP 405, 'Method Not Allowed')
+
+[http_406]
+ Nota : La URL devuelve un error (Código HTTP 406, 'Not Acceptable')
+
+[http_407]
+ Nota : La URL devuelve un error (Código HTTP 407, 'Proxy Authentication Required')
+
+[http_409]
+ Nota : La URL devuelve un error (Código HTTP 409, 'Conflict')
+
+[http_410]
+ Nota : La URL devuelve un error (Código HTTP 410, 'Gone')
+
+[http_411]
+ Nota : La URL devuelve un error (Código HTTP 411, 'Length Required')
+
+[http_412]
+ Nota : La URL devuelve un error (Código HTTP 412, 'Precondition Failed')
+
+[http_413]
+ Nota : La URL devuelve un error (Código HTTP 413, 'Payload Too Large')
+
+[http_414]
+ Nota : La URL devuelve un error (Código HTTP 414, 'URI Too Long')
+
+[http_415]
+ Nota : La URL devuelve un error (Código HTTP 415, 'Unsupported Media Type')
+
+[http_416]
+ Nota : La URL devuelve un error (Código HTTP 416, 'Range Not Satisfiable')
+
+[http_417]
+ Nota : La URL devuelve un error (Código HTTP 417, 'Expectation Failed')
+
+[http_421]
+ Nota : La URL devuelve un error (Código HTTP 421, 'Misdirected Request')
+
+[http_422]
+ Nota : La URL devuelve un error (Código HTTP 422, 'Unprocessable Entity')
+
+[http_423]
+ Nota : La URL devuelve un error (Código HTTP 423, 'Locked')
+
+[http_424]
+ Nota : La URL devuelve un error (Código HTTP 424, 'Failed Dependency')
+
+[http_425]
+ Nota : La URL devuelve un error (Código HTTP 425, 'Too Early')
+
+[http_426]
+ Nota : La URL devuelve un error (Código HTTP 426, 'Upgrade Required')
+
+[http_428]
+ Nota : La URL devuelve un error (Código HTTP 428, 'Precondition Required')
+
+[http_429]
+ Nota : La URL devuelve un error (Código HTTP 429, 'Too Many Requests')
+
+[http_431]
+ Nota : La URL devuelve un error (Código HTTP 431, 'Request Header Fields Too Large')
+
+[http_451]
+ Nota : La URL devuelve un error (Código HTTP 451, 'Unavailable For Legal Reasons')
+
+[server_500]
+ Error en servidor (Código HTTP 500, 'Internal Server Error')
+
+[server_501]
+ Error en servidor (Código HTTP 501, 'Not Implemented')
+
+[server_502]
+ Error en servidor (Código HTTP 502, 'Bad Gateway')
+
+[server_503]
+ Error en servidor (Código HTTP 503, 'Service Unavailable')
+
+[server_504]
+ Error en servidor (Código HTTP 504, 'Gateway Timeout')
+
+[server_505]
+ Error en servidor (Código HTTP 505, 'HTTP Version Not Supported')
+
+[server_506]
+ Error en servidor (Código HTTP 506, 'Variant Also Negotiates')
+
+[server_507]
+ Error en servidor (Código HTTP 507, 'Insufficient Storage')
+
+[server_508]
+ Error en servidor (Código HTTP 508, 'Loop Detected')
+
+[server_510]
+ Error en servidor (Código HTTP 510, 'Not Extended')
+
+[server_511]
+ Error en servidor (Código HTTP 511, 'Network Authentication Required')
+
+[server_520]
+ Error del servidor asociado generalmente con un CDN (código HTTP 520, 'Unknown error')
+
+[server_521]
+ Error del servidor asociado generalmente con un CDN (código HTTP 521, 'Web server is down')
+
+[server_522]
+ Error del servidor asociado generalmente con un CDN (código HTTP 522, 'Connection timed out')
+
+[server_523]
+ Error del servidor asociado generalmente con un CDN (código HTTP 523, 'Origin is unreachable')
+
+[server_524]
+ Error del servidor asociado generalmente con un CDN (código HTTP 524, 'A timeout occurred')
+
+[server_525]
+ Error del servidor asociado generalmente con un CDN (código HTTP 525, 'SSL handshake failed')
+
+[server_526]
+ Error del servidor asociado generalmente con un CDN (código HTTP 526, 'Invalid SSL certificate')
+
+[server_527]
+ Error del servidor asociado generalmente con un CDN (código HTTP 527, 'Railgun error')
+
+[server_530]
+ Error del servidor asociado generalmente con un CDN (código HTTP 530, 'Review accompanying 1XXX error')
+
+[ixuacom_h]
+ X-UA-Compatible (Cabecera obsoleta)
+
+[ixuacom]
+ A menos que necesite compatibilidad con versiones muy antiguas de Internet Explorer 
+ (ej. de la 6 a la 8), elimine esta cabecera y declare correctamente el doctype.
+ Ref: https://getoutofmyhead.dev/x-ua-compatible/
+
+[ixcspr_h]
+ X-Content-Security-Policy-Report-Only (Cabecera obsoleta)
+
+[ixwcspr_h]
+ X-Webkit-CSP-Report-Only (Cabecera obsoleta)
+
+[ixcspr]
+ Esta cabecera está obsoleta; utilice la cabecera "Content-Security-Policy-Report-Only".
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy-Report-Only
+
+[ionloc_h]
+ Onion-Location (Cabecera potencialmente insegura)
+
+[ionloc]
+ Configura correctamente los dominios .onion y revisa sus limitaciones.
+ Ref: https://community.torproject.org/onion-services/advanced/onion-location/
+ Ref: https://forum.torproject.net/t/eventual-support-for-https-dns-records/4799
+
+[ip3p_h]
+ P3P (Cabecera obsoleta)
+
+[ip3p]
+ Esta cabecera está obsoleta. Utiliza en su lugar cookies, consentimientos y normativas (ej. GDPR).
+ Ref: https://webhint.io/docs/user-guide/hints/hint-no-p3p/
+
+[ixrobv_h]
+ X-Robots-Tag (Sin directivas adecuadas)
+
+[ixrobv]
+ Incluya, al menos, una directiva correcta.
+ Ref: https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag
+ Ref: https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240
+
+[ixpermcross_h]
+ X-Permitted-Cross-Domain-Policies (Sin directivas adecuadas)
+
+[ixpermcross]
+ Incluya, al menos, una directiva correcta.
+ Ref: https://getbutterfly.com/security-headers-a-concise-guide/
+ Ref: https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/xdomain.html
+
+[ixpermcrossd_h]
+ X-Permitted-Cross-Domain-Policies (Valores duplicados)
+
+[ixpermcrossd]
+ Esta cabecera, o sus valores, pueden estar duplicados.
+ Ref: https://getbutterfly.com/security-headers-a-concise-guide/
+ Ref: https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/xdomain.html
+
+[icsd_h]
+ Clear-Site-Data (Cabecera ignorada)
+
+[icsdn_h]
+ Clear-Site-Data (Sin directivas adecuadas)
+
+[icsd]
+ Al acceder mediante HTTP los navegadores ignoran esta cabecera.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Clear-Site-Data
+
+[icsdn]
+ Incluya, al menos, una directiva correcta.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Clear-Site-Data
+
+[icencod]
+ Incluya, al menos, una directiva correcta.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Encoding
+
+[icencod_h]
+ Content-Encoding (Sin directivas adecuadas)
+
+[ictlg_h]
+ Content-Type (Valores obsoletos)
+
+[ictlg]
+ El contenido JavaScript debe servirse siempre utilizando el tipo MIME 'text/javascript'.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types
+ Ref: https://www.rfc-editor.org/rfc/rfc9239.html
+
+[ictlhtml_h]
+ Content-Type (Tipo MIME distinto de HTML)
+
+[ictlhtml]
+ La URL no es un documento HTML. Este análisis puede que no aplique en su totalidad.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
+
+[ictlchar_h]
+ Content-Type (Valor inseguro)
+
+[ictlchar]
+ El atributo 'charset' es necesario para evitar ataques XSS en páginas HTML.
+ Ref: https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html
+
+[icrch_h]
+ Critical-CH (Cabecera ignorada)
+
+[icrch]
+ Al acceder mediante HTTP los navegadores ignoran esta cabecera.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Critical-CH
+
+[idig_h]
+ Digest (Cabecera obsoleta)
+
+[idig]
+ Esta cabecera está obsoleta.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Digest
+
+[ixachd_h]
+ Accept-CH (Valores obsoletos)
+
+[ixach_h]
+ Accept-CH (Cabecera ignorada)
+
+[ixach]
+ Al acceder mediante HTTP los navegadores ignoran esta cabecera.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-CH
+
+[ixachd_s]
+ Estos valores están obsoletos: 
+
+[ixachd]
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-CH
+
+[ixacl_h]
+ Accept-CH-Lifetime (Cabecera obsoleta)
+
+[ixacld]
+ Esta cabecera está obsoleta.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-CH-Lifetime
+
+[icred_h]
+ Access-Control-Allow-Credentials (Valores incorrectos)
+
+[icred]
+ El único valor válido para esta cabecera es 'true'.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Credentials
+
+[ixcdpr_h]
+ Content-DPR (Cabecera obsoleta)
+
+[ixcdprd]
+ Esta cabecera está obsoleta.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-DPR
+
+[ickeep_h]
+ Keep-Alive (Cabecera ignorada)
+
+[ickeep]
+ Esta cabecera se ignora si el valor de la cabecera 'Connection' no es 'keep-alive'.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Keep-Alive
+
+[ixlalloc_h]
+ Large-Allocation (Cabecera obsoleta)
+
+[ixallocd]
+ Esta cabecera está obsoleta.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Large-Allocation
+
+[inel_h]
+ NEL (Sin directivas adecuadas)
+
+[iobsb_h]
+ Observe-Browsing-Topics (Sin directivas adecuadas)
+
+[inel]
+ Incluya, al menos, una directiva correcta.
+ Ref: https://w3c.github.io/network-error-logging/#nel-response-header
+
+[iobsb]
+ Incluya, al menos, una directiva correcta.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Observe-Browsing-Topics
+
+[inelm_h]
+ NEL (Directivas ausentes)
+
+[inelm]
+ Las directivas 'report_to' y 'max_age' son obligatorias.
+ Ref: https://w3c.github.io/network-error-logging/#nel-response-header
+
+[ixtk_h]
+ Tk (Cabecera obsoleta)
+
+[ixtkd]
+ Esta cabecera está obsoleta.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Tk
+
+[ixwandig_h]
+ Want-Digest (Cabecera obsoleta)
+
+[ixwandig]
+ Esta cabecera está obsoleta.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Want-Digest
+
+[ixwar_h]
+ Warning (Cabecera obsoleta)
+
+[ixward]
+ Esta cabecera está obsoleta.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Warning
+
+[ixvary_h]
+ Vary (Cabecera potencialmente insegura)
+
+[ixvary]
+ Los valores de esta cabecera pueden exponer otras, facilitando ataques si aceptan input de usuario.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Vary
+ Ref: https://www.yeswehack.com/fr/learn-bug-bounty/http-header-exploitation
+
+[no_sec_headers]
+ No hay cabeceras de seguridad HTTP habilitadas.
+
+[icsi_d_r]
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
+
+[itrailer_d_r]
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Trailer
+
+[icsiro_d]
+ Content-Security-Policy-Report-Only (Directivas obsoletas)
+
+[icsiro_d_r]
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy-Report-Only
+
+[icsi_d_s]
+ Evite utilizar directivas obsoletas: 
+
+[itrailer_d_s]
+ Evite utilizar directivas no permitidas: 
+
+[imethods_s]
+ Asegúrese de que estos métodos HTTP habilitados son necesarios: 
+
+[icoep_h]
+ Cross-Origin-Embedder-Policy (Sin directivas adecuadas)
+
+[icoep]
+ Incluya, al menos, una directiva correcta.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy
+
+[icoop_h]
+ Cross-Origin-Opener-Policy (Sin directivas adecuadas)
+
+[icoop]
+ Incluya, al menos, una directiva correcta.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy
+
+[icorp_h]
+ Cross-Origin-Resource-Policy (Sin directivas adecuadas)
+
+[icorp]
+ Incluya, al menos, una directiva correcta.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy
+
+[icsp_h]
+ Content-Security-Policy (Valores inseguros)
+
+[icspi_h]
+ Content-Security-Policy (Directiva insegura)
+
+[imethods_h]
+ Access-Control-Allow-Methods (Valores inseguros)
+
+[iaccess_h]
+ Access-Control-Allow-Origin (Valores inseguros)
+
+[iacessma_h]
+ Access-Control-Max-Age (Valor excesivo)
+
+[imethods_hh]
+ Allow (Valores inseguros)
+
+[icache_h]
+ Cache-Control (Valores recomendados)
+
+[icachev_h]
+ Cache-Control (Sin directivas adecuadas)
+
+[icsi_h]
+ Content-Security-Policy (Sin directivas adecuadas)
+
+[icsi_d]
+ Content-Security-Policy (Directivas obsoletas)
+
+[icsn_h]
+ Content-Security-Policy (Valores incorrectos)
+
+[icsh_h]
+ Content-Security-Policy (Esquemas inseguros)
+
+[icsipa_h]
+ Content-Security-Policy (IP detectada)
+
+[icsw_h]
+ Content-Security-Policy (Orígenes demasiado permisivos)
+
+[icsu_h]
+ Content-Security-Policy (Funcionalidad insegura)
+
+[icsnces_h]
+ Content-Security-Policy (Nonce inseguro)
+
+[ieta_h]
+ Etag (Cabecera potencialmente insegura)
+
+[iexct_h]
+ Expect-CT (Cabecera obsoleta)
+
+[iexpi_h]
+ Expires (Cabecera ignorada)
+
+[iffea_h]
+ Feature-Policy (Cabecera obsoleta)
+
+[ihttp_h]
+ HTTP (Esquema inseguro)
+
+[ifpoln_h]
+ Permissions-Policy (Sin valores adecuados)
+
+[ifnvarys_h]
+ No-Vary-Search (Sin directivas adecuadas)
+
+[ifpol_h]
+ Permissions-Policy (Valores muy permisivos)
+
+[ifpoli_h]
+ Permissions-Policy (Valores incorrectos)
+
+[ifpold_h]
+ Permissions-Policy (Valores obsoletos)
+
+[iprag_h]
+ Pragma (Cabecera obsoleta)
+
+[iprxauthn_h]
+ Proxy-Authenticate (Sin directivas adecuadas)
+
+[iprxauth_h]
+ Proxy-Authenticate (Valor inseguro)
+
+[ipkp_h]
+ Public-Key-Pins (Cabecera obsoleta)
+
+[ipkpr_h]
+ Public-Key-Pins-Report-Only (Cabecera obsoleta)
+
+[iref_h]
+ Referrer-Policy (Valores recomendados)
+
+[islogin_h]
+ Set-Login (Sin directivas adecuadas)
+
+[irefi_h]
+ Referrer-Policy (Valor inseguro)
+
+[irefn_h]
+ Referrer-Policy (Valor incorrecto)
+
+[irepe_h]
+ Reporting-Endpoints (Valor ignorado)
+
+[irepdig_h]
+ Repr-Digest (Sin directivas adecuadas)
+
+[irepdigi_h]
+ Repr-Digest (Valor inseguro)
+
+[itim_h]
+ Server-Timing (Cabecera potencialmente insegura)
+
+[iset_h]
+ Set-Cookie (Atributos inseguros)
+
+[iseti_h]
+ Set-Cookie (Esquema inseguro)
+
+[iseti_m]
+ Set-Cookie (Atributo ausente)
+
+[ispref_m]
+ Set-Cookie (Prefijos de cookies)
+
+[ismap_m]
+ SourceMap (Funcionalidad insegura)
+
+[ispec_m]
+ Speculation-Rules (Cabecera potencialmente insegura)
+
+[isdyn_h]
+ Strict-Dynamic (Cabecera incorrecta)
+
+[ists_h]
+ Strict-Transport-Security (Valores recomendados)
+
+[istsr_h]
+ Strict-Transport-Security (Valores obligatorios)
+
+[istsd_h]
+ Strict-Transport-Security (Valores duplicados)
+
+[ihsts_h]
+ Strict-Transport-Security (Cabecera ignorada)
+
+[itao_h]
+ Timing-Allow-Origin (Cabecera potencialmente insegura)
+
+[itrailer_h]
+ Trailer (Directivas no permitidas)
+
+[ictrf_h]
+ Transfer-Encoding (Sin directivas adecuadas)
+
+[islmodei_h]
+ Supports-Loading-Mode (Cabecera ignorada)
+
+[islmode_h]
+ Supports-Loading-Mode (Sin directivas adecuadas)
+
+[isurrmode_h]
+ Surrogate-Control (Sin directivas adecuadas)
+
+[iorigcluster_h]
+ Origin-Agent-Cluster (Sin directivas adecuadas)
+
+[ihbas_h]
+ WWW-Authenticate (Valor inseguro)
+
+[ixcsp_h]
+ X-Content-Security-Policy (Cabecera obsoleta)
+
+[ictpd_h]
+ X-Content-Type-Options (Valores duplicados)
+
+[ictp_h]
+ X-Content-Type-Options (Valor incorrecto)
+
+[ixdp_h]
+ X-DNS-Prefetch-Control (Cabecera potencialmente insegura)
+
+[ixdow_h]
+ X-Download-Options (Cabecera obsoleta)
+
+[ixfo_h]
+ X-Frame-Options (Valores duplicados)
+
+[ixfod_h]
+ X-Frame-Options (Valor obsoleto)
+
+[ixfoi_h]
+ X-Frame-Options (Valores incorrectos)
+
+[ixpad_h]
+ X-Pad (Cabecera obsoleta)
+
+[ixpermcrossu_h]
+ X-Permitted-Cross-Domain-Policies (Valor inseguro)
+
+[ixpb_h]
+ X-Pingback (Valor inseguro)
+
+[ixrob_h]
+ X-Robots-Tag (Valor inseguro)
+
+[ixrun_h]
+ X-Runtime (Valor inseguro)
+
+[ixsrc_h]
+ X-SourceMap (Cabecera obsoleta)
+
+[ixwcsp_h]
+ X-Webkit-CSP (Cabecera obsoleta)
+
+[ixxp_h]
+ X-XSS-Protection (Valor inseguro)
+
+[ixxpdp_h]
+ X-XSS-Protection (Cabecera obsoleta)
+
+[ixxpd_h]
+ X-XSS-Protection (Valores duplicados)
+
+[pdf_title]
+'humble' (Analizador de cabeceras HTTP)
+
+[pdf_footer]
+Página 
+
+[pdf_footer2]
+ de
+
+[pdf_meta_title]
+Análisis de las cabeceras HTTP de
+
+[pdf_meta_keywords]
+Cabeceras HTTP, Analizador, Análisis, Ciberseguridad, Análisis de seguridad, Herramienta de seguridad, Revisión de cabeceras
+
+[pdf_meta_language]
+es-ES
+
+[pdf_meta_subject]
+Informe de cabeceras HTTP
+
+[0section_s]
+0.- Información
+
+[0headers_s]
+Cabeceras de respuesta HTTP
+
+[1missing_s]
+1.- Cabeceras no habilitadas
+
+[2fingerprint_s]
+2.- Huella digital por cabeceras
+
+[3depinsecure_s]
+3.- Protocolos/Cabeceras obsoletas o inseguras
+
+[4empty_s]
+4.- Cabeceras sin valor
+
+[5compat_s]
+5.- Compatibilidad de navegadores
+
+[security_guides]
+
+ Guías para habilitar cabeceras de respuesta HTTP de seguridad en servidores/servicios populares:
+
+[e_schema]
+ Error: Incluye el esquema "http" o "https" en la URL a analizar.
+
+[e_invalid]
+ Error: La URL no resuelve. Revisa que sea correcta y prueba de nuevo.
+
+[server_serror]
+ Error en servidor; espera unos minutos y prueba de nuevo.
+
+[e_404]
+ Error: No se encuentra la URL. Revisa que sea correcta y prueba de nuevo.
+
+[e_timeout]
+ Error: Se ha superado el tiempo de espera. Prueba en unos minutos.
+
+[report]
+ Informe guardado en 
+
+[0section]
+[0. Información]
+
+[0headers]
+[Cabeceras de respuesta HTTP]
+
+[1missing]
+[1. Cabeceras de respuesta HTTP no habilitadas]
+
+[2fingerprint]
+[2. Huella digital por cabeceras de respuesta HTTP]
+
+[3depinsecure]
+[3. Protocolos/Cabeceras de respuesta HTTP obsoletas o con valores inseguros]
+
+[4empty]
+[4. Cabeceras de respuesta HTTP sin valor]
+
+[5compat]
+[5. Compatibilidad de navegadores para cabeceras de seguridad HTTP habilitadas]
+
+[analysis]
+ Analizando URL, espera por favor ...
+
+[unreliable_analysis]
+ (El análisis tarda más de lo habitual -quizá por conectividad de red, WAF, etc- y puede no ser fiable)
+
+[unreliable_analysis_note]
+ Nota : El análisis puede no ser fiable por el tiempo que tardó en responder la URL.
+
+[limited_analysis_note]
+ Nota: Exportar a CSV/JSON limita actualmente a un análisis breve
+
+[analysis_redirects_note]
+ Nota : Se analizará la URL exacta, sin seguir redireccionamientos.
+
+[analysis_skipped_note]
+ Nota : Omitidas comprobaciones de cabeceras HTTP no habilitadas e inseguras/obsoletas para
+
+[analysis_redirects]
+ Nota : Se ha indicado expresamente analizar la URL exacta, sin seguir redirecciones.
+
+[analysis_output]
+ Analizando URL y guardando el informe, espera por favor ...
+
+[analysis_date]
+ Fecha:
+
+[python_version]
+
+ Error: Esta herramienta requiere, al menos, Python 3.9.
+ Ref: https://github.com/rfc-st/humble#installation--update
+
+[no_warnings]
+ Todo parece estar bien.
+
+[mcache]
+ Directivas para el cacheo de peticiones y respuestas.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control
+
+[mcsd]
+ Elimina datos asociados a cookies, cache, etc. del sito web.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Clear-Site-Data
+
+[mctype]
+ Indica el tipo de medio original del recurso.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type
+
+[mcoe]
+ Evita que un documento cargue recursos de origen cruzado sin permiso previo.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy
+
+[mcop]
+ Evita que otros sitios web obtengan referencias de ventanas arbitrarias.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy
+
+[mcor]
+ Evita la carga de ciertos recursos por otras fuentes.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)
+
+[mcsp]
+ Detecta y mitiga, entre otros, ataques Cross-site scripting.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
+
+[mpermission]
+ Anteriormente llamada "Feature-Policy", permite o deniega funciones del navegador.
+ Ref: https://scotthelme.co.uk/goodbye-feature-policy-and-hello-permissions-policy/
+
+[mnel]
+ Permite declarar directivas para notificar errores.
+ Ref: https://scotthelme.co.uk/network-error-logging-deep-dive/
+
+[mreferrer]
+ Controla los datos del referrer que deben incluirse en las solicitudes.
+ Ref: https://scotthelme.co.uk/a-new-security-header-referrer-policy/
+
+[msts]
+ Indica a los navegadores que accedan al sitio web exclusivamente por HTTPS.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security
+
+[mxcto]
+ Indica que se sigan los tipos MIME indicados en la cabecera "Content-Type".
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options
+
+[mxfo]
+ Evita los ataques de clickjacking, limitando las fuentes de contenido embebido.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
+
+[mxpcd]
+ Limita el acceso a datos por recursos externos (ej. documentos Adobe Flash/PDF) en el dominio.
+ Ref: https://owasp.org/www-project-secure-headers/#div-headers
+
+[iaccess]
+ Revise los valores '*' o 'null', y sus requisitos de intercambio de recursos de origen cruzado.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin
+
+[iaccessma]
+ El valor de esta cabecera es superior al máximo limitado por navegadores populares.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Max-Age
+
+[icache]
+ Si hay datos sensibles, habilite 'no-cache', 'no-store', y 'must-revalidate'.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control
+
+[icachev]
+ Incluya, al menos, una directiva correcta.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control
+
+[icsp]
+ 'unsafe-inline' y 'unsafe-eval' anulan las principales ventajas de esta cabecera.
+ Ref: https://csper.io/blog/no-more-unsafe-inline
+ Ref: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval
+
+[icspi]
+ 'upgrade-insecure-requests' sin la cabecera 'HSTS' podría facilitar ataques SSL Stripping.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
+ Ref: https://www.ssldragon.com/blog/ssl-stripping/
+
+[icsi]
+ Incluya, al menos, una directiva correcta.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
+
+[icsn]
+ '=', en el contexto de esta cabecera, puede ser un valor incorrecto.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
+
+[icsh]
+ No permita esquemas inseguros, sin encriptar: 
+
+[icsh_b]
+ Ref: https://www.cloudflare.com/learning/ssl/why-is-http-not-secure/
+ Ref: https://http.dev/wss
+
+[icsw]
+ Limite estos orígenes permisivos: 
+
+[icsu]
+ Evita utilizar 'unsafe-hashes', y traslada toda la lógica asociada a ella a un fichero Javascript.
+ Ref: https://content-security-policy.com/unsafe-hashes/
+
+[icsnces]
+ Los Nonces deben tener al menos 128 bits de entropía (32 caracteres hexadecimales/24 caracteres base64).
+ Ref: https://content-security-policy.com/nonce/
+
+[icsipa]
+ Los estándares desaconsejan las direcciones IP como valores (excepto para 127.0.0.1).
+ Ref: https://www.w3.org/TR/CSP2/#match-source-expression
+ Ref: https://www.w3.org/TR/CSP3/#match-hosts
+
+[ictp]
+ El único valor permitido es 'nosniff'.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options
+
+[ictpd]
+ Esta cabecera, o sus valores, pueden estar duplicados.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options
+
+[ieta]
+ Aunque el riesgo pueda ser mínimo, esta cabecera no debe incluir datos de inodes.
+ Ref: https://www.pentestpartners.com/security-blog/vulnerabilities-that-arent-etag-headers/
+
+[iffea]
+ "Feature-Policy" ha pasado a llamarse "Permissions-Policy".
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy
+
+[ifnvarys]
+ Incluya, al menos, una directiva correcta.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/No-Vary-Search
+
+[ifpoln]
+ Incluya, al menos, una directiva correcta.
+ Ref: https://github.com/w3c/webappsec-permissions-policy/blob/main/features.md
+ Ref: https://csplite.com/fp/
+
+[ifpol]
+ El valor '(*)' permite el uso de la funcionalidad independientemente de su origen.
+ Ref: https://developer.chrome.com/en/docs/privacy-sandbox/permissions-policy/
+
+[ifpoli]
+ Utilice '=()' en vez de 'none'.
+ Ref: https://scotthelme.co.uk/goodbye-feature-policy-and-hello-permissions-policy/
+
+[ifpold_h_s]
+ Evite utilizar valores obsoletos: 
+
+[ifpold]
+ Ref: https://github.com/w3c/webappsec-permissions-policy/blob/main/features.md
+
+[ihttp]
+ Uso de esquema inseguro HTTP, con comunicaciones sin cifrar.
+ Ref: https://www.cloudflare.com/learning/ssl/why-is-http-not-secure/
+
+[imethods]
+ Ref: https://appcheck-ng.com/http-verbs-security-risks/
+
+[icsw_b]
+ Ref: https://content-security-policy.com/
+
+[iprag]
+ Esta cabecera está obsoleta.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma
+
+[ipkp]
+ Esta cabecera está obsoleta.
+ Ref: https://scotthelme.co.uk/hpkp-is-no-more/
+
+[iprxauthn]
+ Incluya, al menos, una directiva correcta.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Proxy-Authenticate
+
+[itrf]
+ Incluya, al menos, una directiva correcta.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Transfer-Encoding
+
+[iref]
+ Si hay datos sensibles utilice 'strict-origin' o 'strict-origin-when-cross-origin'.
+ O incluso 'no-referrer-when-downgrade' o 'no-referrer'.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
+
+[islogin]
+ Incluya, al menos, una directiva correcta.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Login
+
+[irefi]
+ 'unsafe-url' filtra datos potencialmente privados de las URLs HTTPS a fuentes inseguras.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
+
+[irefn]
+ Incluya, al menos, una directiva correcta.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
+
+[irepe]
+ Los endpoints inseguros ('http:') se ignoran.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Reporting-Endpoints
+
+[irepdig]
+ Incluya, al menos, una directiva correcta.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Repr-Digest
+
+[irepdigi]
+ No se deben utilizar algoritmos inseguros por riesgo de colisiones.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Repr-Digest
+
+[iset]
+ Habilite 'Secure' y 'HttpOnly': para enviarla mediante HTTPS y evitar que sea accedida por APIs.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie
+
+[iseti]
+ Las cookies con atributos 'Secure' deben enviarse vía HTTPS (excepto en localhost).
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie
+
+[isetm]
+ Las cookies 'SameSite=None' también deben establecerse con el atributo 'Secure'.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie
+
+[ispref]
+ Las cookies '__Host-' y '__Secure-' deben servirse desde HTTPS y tener el flag 'secure'.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie
+
+[ismap]
+ Esta cabecera puede exponer información sensible sobre el código fuente original.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/SourceMap
+
+[ispec]
+ Asegúrese que esta cabecera no permita condiciones de carga especulativa inseguras.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Speculation-Rules
+ Ref: https://developer.mozilla.org/en-US/docs/Web/API/Speculation_Rules_API
+
+[isdyn]
+ Esto no es una cabecera, sino una palabra clave de la cabecera 'Content-Security-Policy'.
+ Ref: https://content-security-policy.com/strict-dynamic/
+
+[ists]
+ Habilite 'includeSubDomains' y 'max-age' (con 31536000 -un año- como mínimo).
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security
+ Ref: https://https.cio.gov/hsts/
+
+[istsr]
+ 'preload' requiere 'includeSubDomains' y 'max-age' (con 31536000 -un año- como mínimo).
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security
+
+[istsd]
+ Esta cabecera, o sus valores, pueden estar duplicados.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security
+
+[islmodei]
+ Al acceder mediante HTTP los navegadores ignoran esta cabecera.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Supports-Loading-Mode
+
+[islmode]
+ Incluya, al menos, una directiva correcta.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Supports-Loading-Mode
+
+[isurrmode]
+ Incluya, al menos, una directiva correcta.
+ Ref: https://www.w3.org/TR/edge-arch/
+
+[iorigcluster]
+ EL único valor permitido es '?1'.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Origin-Agent-Cluster
+
+[ihsts]
+ Al acceder mediante HTTP los navegadores ignoran esta cabecera.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security
+
+[ihbas]
+ La autenticación HTTP "Basic" transmite credenciales codificadas en base64, sin cifrarlas.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication
+
+[iexct]
+ Esta cabecera está obsoleta.
+ Ref: https://chromestatus.com/feature/6244547273687040
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expect-CT
+
+[iexpi]
+ Cabecera ignorada por las directivas 'max-age' o 's-maxage' en la cabecera que controla la caché.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expires
+
+[itao]
+ El valor '*' permite a cualquier origen ver recursos pontencialmente sensibles.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin
+
+[itim]
+ Esta cabecera no debe exponer datos sensibles o de infraestructura.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Server-Timing
+
+[ixpermcrossu]
+ El valor 'all' permite peticiones de documentos Flash y PDF entre dominios.
+ Ref: https://getbutterfly.com/security-headers-a-concise-guide/
+ Ref: https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/xdomain.html
+
+[ixcsp]
+ Esta cabecera está obsoleta; utilice la cabecera "Content-Security-Policy".
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
+
+[ixdp]
+ Esta cabecera puede eludir las directivas de la cabecera "Content-Security-Policy".
+ Ref: https://blog.compass-security.com/2016/10/bypassing-content-security-policy-with-dns-prefetching/
+
+[ixdow]
+ Esta cabecera es exclusiva de Internet Explorer 8 (obsoleto desde 2020).
+ Ref: https://webtechsurvey.com/response-header/x-download-options
+ Ref: https://docs.microsoft.com/en-us/lifecycle/products/internet-explorer-8
+
+[ixfo]
+ Esta cabecera, o sus valores, pueden estar duplicados.
+ Consejo: sustituya esta cabecera por la directiva 'frame-ancestors' de CSP.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
+
+[ixfod]
+ "ALLOW-FROM" no está soportado en los navegadores actuales.
+ Consejo: sustituya esta cabecera por la directiva 'frame-ancestors' de CSP.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
+
+[ixfodi]
+ Los únicos valores permitidos en esta cabeceras son "DENY" o "SAMEORIGIN".
+ Consejo: sustituya esta cabecera por la directiva 'frame-ancestors' de CSP.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
+
+[ixpad]
+ Esta cabecera está obsoleta desde 2008.
+ Ref: https://stackoverflow.com/questions/8711584/x-pad-avoid-browser-bug-header-added-by-apache
+
+[ixpb]
+ xmlrpc.php supone un riesgo de seguridad; ha sido sustituido por la API REST de WordPress.
+ Ref: https://kinsta.com/blog/xmlrpc-php/
+
+[ixrob]
+ El valor 'all' permite que se indexe, y sirva, todo el contenido del sitio web.
+ Puede suponer un riesgo de seguridad, al indexar datos sensibles.
+ Ref: https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag
+
+[ixrun]
+ El valor de esta cabecera puede facilitar la identificación de usuarios activos.
+ Ref: https://www.virtuesecurity.com/kb/x-runtime-header-timing-attacks/
+
+[ixsrc]
+ Esta cabecera está obsoleta. Utiliza "SourceMap".
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/SourceMap
+
+[ixxp]
+ Para mitigar ataques Cross-site scripting, habilite la cabecera "Content-Security-Policy".
+ Ref: https://auth0.com/blog/defending-against-xss-with-csp/
+
+[ixxpdp]
+ Esta cabecera está obsoleta en los tres principales navegadores.
+ En su lugar, utilice de forma restrictiva la cabecera "Content-Security-Policy".
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection
+
+[ixxpd]
+ Esta cabecera, o sus valores, pueden estar duplicados.
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection
+
+[aemp]
+ Cabeceras HTTP vacías (y por ello se consideran deshabilitadas):
+
+[afgp]
+ Estas cabeceras pueden exponer datos sensibles (software, versiones, hosts, etc):
+
+[aisc]
+ Estas cabeceras, o protocolos, están obsoletos o sus valores son inseguros:
+
+[ru_analysis_message]
+
+ 'humble' no analizará dominios rusos (ni permitirá su uso desde Rusia) hasta que se retire de Ucrania.
+ Por favor, lee esto: https://github.com/rfc-st/humble/blob/master/CODE_OF_CONDUCT.md#update-20220326
+
+[missing_cnt]
+  Cabeceras no habilitadas:                    
+
+[fng_cnt]
+  Huella digital por cabeceras:                
+
+[insecure_cnt]
+  Protocolos/Cabeceras obsoletas o inseguras:  
+
+[empty_cnt]
+  Cabeceras sin valor:                         
+
+[total_cnt]
+  Advertencias a revisar:                      
+
+[analysis_time]
+Analisis realizado en 
+
+[analysis_time_sec]
+ segundos! (cambios con respecto al ultimo análisis entre paréntesis)
+
+[first_analysis]
+Primer análisis
+
+[stats_analysis]
+Estadísticas de
+
+[global_stats_analysis]
+Estadísticas globales de todos los análisis realizados
+
+[total_analysis]
+ Análisis realizados 
+
+[first_analysis_a]
+ Primer análisis     
+
+[latest_analysis]
+ Último análisis     
+
+[urls]
+URLs
+
+[most_analyzed]
+ Más analizadas                                 
+
+[least_analyzed]
+ Menos analizadas                               
+
+[most_warnings]
+ Más advertencias                               
+
+[least_warnings]
+ Menos advertencias                             
+
+[most_missing]
+ Más cabeceras por habilitar                    
+
+[least_missing]
+ Menos cabeceras por habilitar                  
+
+[most_fingerprints]
+ Más huella digital por cabeceras               
+
+[least_fingerprints]
+ Menos huella digital por cabeceras             
+
+[most_insecure]
+ Más cabeceras/protocolos inseguros/obsoletos   
+
+[least_insecure]
+ Menos cabeceras/protocolos inseguros/obsoletos 
+
+[most_empty]
+ Más cabeceras vacías                           
+
+[least_empty]
+ Menos cabeceras vacías                         
+
+[best_analysis]
+ Mejor análisis      
+
+[worst_analysis]
+ Peor análisis       
+
+[total_global_analysis]
+ URLs analizadas     
+
+[total_warnings]
+(Advertencias: 
+
+[no_analysis]
+Error: Para utilizar esta opción ('-a') debes haber ejecutado, como mínimo, un análisis contra esa URL.
+
+[no_global_analysis]
+Error: Para utilizar esta opción ('-a') debes haber ejecutado, como mínimo, un análisis contra una URL.
+
+[no_missing]
+ Sin cabeceras por habilitar                            
+
+[no_fingerprint]
+ Sin huellas digitales                                  
+
+[no_ins_deprecated]
+ Sin cabeceras/protocolos inseguros/obsoletos           
+
+[no_empty]
+ Sin cabeceras vacías                                   
+
+[analysis_year_month]
+Cronología
+
+[analysis_y]
+Análisis
+
+[average_warnings]
+ Advertencias por análisis                              
+
+[average_warnings_year]
+ Advertencias por año                                   
+
+[average_miss]
+ Cabeceras sin habilitar por análisis                   
+
+[average_fng]
+ Cabeceras con huella digital por análisis              
+
+[average_dep]
+ Cabeceras/protocolos inseguros/obsoletos por análisis  
+
+[average_ety]
+ Cabeceras vacías por análisis                          
+
+[averages]
+Promedios
+
+[main]
+Principales
+
+[empty_fng]
+ (Sin valor)
+
+[highlights]
+A destacar
+
+[month_01]
+ Enero
+
+[month_02]
+ Febrero
+
+[month_03]
+ Marzo
+
+[month_04]
+ Abril
+
+[month_05]
+ Mayo
+
+[month_06]
+ Junio
+
+[month_07]
+ Julio
+
+[month_08]
+ Agosto
+
+[month_09]
+ Septiembre
+
+[month_10]
+ Octubre
+
+[month_11]
+ Noviembre
+
+[month_12]
+ Diciembre
+
+[humble_not_recent]
+ Tu versión de 'humble' no es reciente
+
+[humble_recent]
+ Tienes una versión reciente de 'humble' :).
+
+[github_humble]
+ Comprueba las actualizaciones en https://github.com/rfc-st/humble/
+
+[update_error]
+ Hubo un error al comprobar si usas la versión más reciente; espera unos minutos y vuelve a intentarlo.
+
+[fng_stats]
+ Estadísticas de huella digital por cabeceras
+
+[fng_source]
+ (fichero fuente: "additional/fingerprint.txt")
+
+[fng_add]
+ Cabeceras relacionadas con
+
+[fng_zero]
+ No se han encontrado cabeceras relacionadas con
+
+[fng_zero_2]
+ Consejo: entrecomilla varias palabras para buscar coincidencias exactas; ej. "Microsoft Azure Storage"
+
+[fng_top]
+ Top 20 de grupos de cabeceras por huella digital en relación a las
+
+[fng_top_2]
+ cabeceras del fichero fuente.
+
+[ua_available]
+ User-Agents disponibles
+
+[ua_source]
+ (fuente: 'additional/user_agents.txt')
+
+[ua_invalid]
+Error: No existe ese ID de User-Agent; consulta los disponibles con '-ua 0'
+
+[windows_ssltls]
+
+Para ejecutar un análisis SSL/TLS en Windows (vía 'testssl.sh') recomiendo una de estas opciones:
+
+1. Cygwin
+
+- Descarga https://github.com/drwetter/testssl.sh/releases
+- Descarga https://www.cygwin.com/install.html
+- Ejecuta el instalador de Cygwin y selecciona los paquetes que desees (incluyendo 'bash')
+- Ejecuta la terminal Cygwin
+- Cambia al directorio donde esté 'testssl.sh' y lanza el análisis con 'bash':
+-- Ej. bash testssl.sh -f -g -p -U -s --hints https://www.spacex.com
+
+2. MSYS2
+
+- Descarga https://github.com/drwetter/testssl.sh/releases
+- Descarga https://www.msys2.org/
+- Ejecuta MSYS2 y sigue las instrucciones del instalador
+- Ejecuta la terminal MSYS2 MinGW 64-bit
+- Cambia al directorio donde esté 'testssl.sh' y lanza el análisis con 'bash':
+-- Ej. bash testssl.sh -f -g -p -U -s --hints https://www.spacex.com
+
+3. WSL (Subsistema de Windows para Linux)
+
+- Descarga https://github.com/drwetter/testssl.sh/releases
+- Revisa las indicaciones sobre WSL: https://learn.microsoft.com/en-us/windows/wsl/install
+- Ejecuta la distribución Linux desde el menú Inicio o ejecuta 'wsl' desde el símbolo del sistema
+- Cambia al directorio donde esté 'testssl.sh' y lanza el análisis con 'bash':
+-- Ej. bash testssl.sh -f -g -p -U -s --hints https://www.spacex.com
+
+[args_notestssl]
+Error: '-e' requiere la ruta de 'testssl.sh' y '-u'.
+
+[args_lang]
+Error: '-l' requiere '-u' o '-a'.
+
+[args_useragent]
+Error: '-ua' requiere '-u'.
+
+[args_several]
+Error: '-b', '-df', -'o', '-r' y '-s' requieren '-u'.
+
+[args_csv_json]
+Error: '-o csv' y '-o json' requieren '-b'.
+
+[notestssl_file]
+Error: 'testssl.sh' no existe en la ruta indicada.
+
+[notestssl_path]
+Error: la ruta indicada de 'testssl.sh' es incorrecta.
+
+[args_skipped]
+Error: '-s' requiere, al menos, una cabecera HTTP de respuesta.
+
+[args_skipped_unknown]
+Error: Elimina estas cabeceras HTTP del parámetro '-s', ya que 'humble' no las comprueba: 
+
+[args_nooutputfmt]
+Error: '-op' requiere '-o'.
+
+[args_noexportpath]
+Error: No existe la ruta indicada 
+
+[args_nowr]
+Erorr: Este usuario no tiene permisos de escritura en la ruta 
+
+[args_path_traversal]
+Error: La ruta indicada parece errónea
+
+[csv_section]
+Sección
+
+[csv_values]
+Valores
+
+[fng_value]
+Valor:
+
+[export_filename]
+ Fich.: 
+
+[d_grade]
+  Nota del análisis:                           D (Revisa 'Protocolos/Cabeceras obsoletas o inseguras')
+
+[c_grade]
+  Nota del análisis:                           C (Revisa 'Cabeceras no habilitadas')
+
+[b_grade]
+  Nota del análisis:                           B (Revisa 'Huella digital por cabeceras')
+
+[a_grade]
+  Nota del análisis:                           A (Revisa 'Cabeceras sin valor')
+
+[perfect_grade]
+  Nota del análisis:                           A+ (Increíble, enhorabuena!)
+
+[testssl_error]
+Error en el análisis TLS/SSL.

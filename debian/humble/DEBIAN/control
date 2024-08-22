@@ -1,0 +1,11 @@
+Package: humble
+Version: 0.1-1
+Architecture: all
+Maintainer: Dario Camonita <danterolle@parrotsec.org>
+Installed-Size: 270
+Depends: python3:any, publicsuffix, python3-colorama, python3-fpdf, python3-requests, python3-tldextract
+Section: python
+Priority: optional
+Homepage: https://github.com/rfc-st/humble
+Description: Humble
+ A humble and fast HTTP Response Header Security Analyzer

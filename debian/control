@@ -1,8 +1,8 @@
 Source: humble
 Section: python
 Priority: optional
-Maintainer: Rafa 'Bluesman' Faura <rafael.fcucalon@gmail.com>
-Build-Depends: debhelper-compat (= 13), python3, python3-pip, dh-python
+Maintainer: Dario Camonita <danterolle@parrotsec.org>
+Build-Depends: debhelper-compat (= 13), python3, python3-pip, dh-sequence-python3, python3-setuptools, python3-all
 Standards-Version: 4.6.2
 Homepage: https://github.com/rfc-st/humble
 Vcs-Git: https://github.com/rfc-st/humble.git
@@ -10,6 +10,6 @@ Vcs-Browser: https://github.com/rfc-st/humble
 
 Package: humble
 Architecture: all
-Depends: ${python3:Depends}, ${misc:Depends}, python3, python3-pip
+Depends: ${python3:Depends}, ${misc:Depends}, publicsuffix, python3-colorama, python3-fpdf, python3-requests, python3-tldextract
 Description: Humble
  A humble and fast HTTP Response Header Security Analyzer
