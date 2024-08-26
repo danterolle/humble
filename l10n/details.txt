@@ -319,7 +319,7 @@
  Keep-Alive (Ignored Header)
 
 [ickeep]
- This header is ignored if the value of the 'Connection' header is not 'keep-alive'.
+ This header is ignored if the value of the "Connection" header is not 'keep-alive'.
  Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Keep-Alive
 
 [ixlalloc_h]
@@ -529,6 +529,9 @@
 [irefn_h]
  Referrer-Policy (Incorrect Value)
 
+[irept_h]
+ Report-To (Deprecated Header)
+
 [irepe_h]
  Reporting-Endpoints (Ignored Value)
 
@@ -699,7 +702,7 @@ HTTP Response Headers
  Guidelines for enabling security HTTP response headers on popular servers/services:
 
 [e_schema]
- Error: No "http" or "https" schema supplied. Check syntax and try again.
+ Error: No 'http' or 'https' schema supplied. Check syntax and try again.
 
 [e_invalid]
  Error: The URL is not valid. Check syntax and try again.
@@ -964,6 +967,10 @@ HTTP Response Headers
  Include at least one valid directive.
  Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
 
+[irept]
+ This header is deprecated. Use instead "Reporting-Endpoints".
+ Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Report-To
+
 [irepe]
  Insecure endpoints ('http:') are ignored.
  Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Reporting-Endpoints
@@ -1039,7 +1046,7 @@ HTTP Response Headers
  Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security
 
 [ihbas]
- The "Basic" HTTP authentication scheme sends base64-encoded credentials, without encrypting them.
+ The 'Basic' HTTP authentication scheme sends base64-encoded credentials, without encrypting them.
  Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication
 
 [iexct]
@@ -1083,12 +1090,12 @@ HTTP Response Headers
  Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
 
 [ixfod]
- "ALLOW-FROM" no longer works in modern browsers.
+ 'ALLOW-FROM' no longer works in modern browsers.
  Advice: Replace this header with the CSP 'frame-ancestors' directive.
  Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
 
 [ixfodi]
- The only values allowed for this header are "DENY" or "SAMEORIGIN".
+ The only values allowed for this header are 'DENY' or 'SAMEORIGIN'.
  Advice: Replace this header with the CSP 'frame-ancestors' directive.
  Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
 
@@ -1345,7 +1352,7 @@ Highlights
  No headers found related to
 
 [fng_zero_2]
- Tip: quote multiple words to search for exact matches; e.g. "Microsoft Azure Storage"
+ Tip: quote multiple words to search for exact matches; e.g. 'Microsoft Azure Storage'
 
 [fng_top]
  Top 20 groups of fingerprint headers in relation to the
@@ -1448,7 +1455,7 @@ examples:
   -u URL -o pdf               Analyzes the URL and exports detailed findings to PDF
   -u URL -r                   Analyzes the URL and reports detailed findings along with HTTP response headers
   -u URL -s ETag NEL          Analyzes the URL and skips 'deprecated/insecure' and 'missing' checks for 'ETag' and 'NEL' headers
-  -u URL -ua 4                Analyzes the URL using the fourth User-Agent of 'additional/user_agents.txt'
+  -u URL -ua 4                Analyzes the URL using the fourth User-Agent of 'additional/user_agents.txt' file
 
 [fng_value]
 Value:
