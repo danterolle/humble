@@ -49,6 +49,7 @@ from csv import writer, QUOTE_ALL
 from urllib.parse import urlparse
 from subprocess import PIPE, Popen
 from os import linesep, path, remove
+from os.path import dirname, abspath
 from collections import Counter, defaultdict
 from argparse import ArgumentParser, RawDescriptionHelpFormatter
 import re
@@ -56,7 +57,6 @@ import ssl
 import sys
 import contextlib
 import concurrent.futures
-import os
 
 # Third-Party imports
 from colorama import Fore, Style, init
@@ -112,7 +112,10 @@ URL_STRING = ('rfc-st', ' URL  : ', 'caniuse')
 current_time = datetime.now().strftime("%Y/%m/%d - %H:%M:%S")
 local_version = datetime.strptime('2024-08-24', '%Y-%m-%d').date()
 
-base_dir = os.path.dirname(os.path.abspath(__file__))
+# Returns the absolute path to the directory where the script is located, 
+# making the paths independent of the current directory from which the 
+# program is run.
+base_dir = dirname(abspath(__file__))
 
 
 class SSLContextAdapter(requests.adapters.HTTPAdapter):
