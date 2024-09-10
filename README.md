@@ -6,7 +6,7 @@
 <a target="_blank" href="https://www.python.org/downloads/" title="Minimum Python version required to run this tool"><img src="https://img.shields.io/badge/Python-%3E%3D3.9-blue?labelColor=343b41"></a>
 <a target="_blank" href="LICENSE" title="License of this tool"><img src="https://img.shields.io/badge/License-MIT-blue.svg?labelColor=343b41"></a>
 <a target="_blank" href="https://github.com/rfc-st/humble/releases" title="Latest release of this tool"><img src="https://img.shields.io/github/v/release/rfc-st/humble?display_name=release&label=Latest%20Release&labelColor=343b41"></a>
-<a target="_blank" href="https://github.com/rfc-st/humble/commits/master" title="Latest commit of this tool"><img src="https://img.shields.io/badge/Latest_Commit-2024--08--31-blue.svg?labelColor=343b41"></a>
+<a target="_blank" href="https://github.com/rfc-st/humble/commits/master" title="Latest commit of this tool"><img src="https://img.shields.io/badge/Latest_Commit-2024--09--07-blue.svg?labelColor=343b41"></a>
 <a target="_blank" href="https://github.com/rfc-st/humble/actions?query=workflow%3ACodeQL" title="Results of the last analysis of this tool with CodeQL"><img src="https://github.com/rfc-st/humble/workflows/CodeQL/badge.svg"></a>
 <a target="_blank" href="https://owasp.org/www-project-secure-headers/#div-technical" title="Official tool in OWASP Secure Headers Project"><img src="https://img.shields.io/badge/OWASP-Tool-blue?labelColor=343b41"></a>
 <a target="_blank" href="https://pkg.kali.org/pkg/humble" title="Official tool in Kali Linux"><img src="https://img.shields.io/badge/Kali%20Linux-Tool-blue?labelColor=343b41"></a>
@@ -50,10 +50,10 @@
 ## Features
 
 :heavy_check_mark: 14 [checks](#checks-missing-headers) of missing HTTP response headers.<br />
-:heavy_check_mark: 1162 [checks](#checks-fingerprint-headers) of fingerprinting through HTTP response headers.<br />
+:heavy_check_mark: 1166 [checks](#checks-fingerprint-headers) of fingerprinting through HTTP response headers.<br />
 :heavy_check_mark: 111 [checks](#checks-deprecated-headersprotocols-and-insecure-values) of deprecated HTTP response headers/protocols or with insecure/wrong values.<br />
 :heavy_check_mark: SSL/TLS checks (requires the **amazing** https://testssl.sh/).<br />
-:heavy_check_mark: Browser support references for enabled HTTP security headers.<br />
+:heavy_check_mark: Browser support references for enabled HTTP security headers (provided by https://caniuse.com/).<br />
 :heavy_check_mark: Two types of analysis: brief and detailed, along with HTTP response headers.<br />
 :heavy_check_mark: Can exclude specific HTTP response headers from the analysis.<br />
 :heavy_check_mark: Can export each analysis to CSV, HTML5, JSON, PDF 1.4 and TXT (and in the PATH of your choice).<br />
@@ -347,11 +347,12 @@ Thanks for downloading _'humble'_, for trying it and for your time!.
 * <a href="https://www.linkedin.com/in/eduardo-boronat/">Eduardo</a> for the first Demo and the example <i>"(Linux) - Analyze multiple URLs and save the results as PDFs"</i>.
 * <a href="https://github.com/gl4nce">gl4nce</a> for <a href="https://github.com/rfc-st/humble/issues/6">this</a> suggestion.
 * İDRİS BUDAK for reporting the need to <a href="https://github.com/rfc-st/humble/commit/f85dd7811859fd2e403a0ecd848b21db20949841">this</a> check.
-* <a href="https://github.com/manuel-sommer">manuel-sommer</a> for <a href="https://github.com/rfc-st/humble/issues/8">this</a>, <a href="https://github.com/rfc-st/humble/issues/10">this</a> and <a href="https://github.com/rfc-st/humble/issues/13">this</a>!.
-* <a href="https://github.com/stanley101music">stanley101music</a> for <a href="https://github.com/rfc-st/humble/issues/14">this</a>, <a href="https://github.com/rfc-st/humble/issues/15">this</a> and <a href="https://github.com/rfc-st/humble/issues/17">this</a>!.
-* <a href="https://github.com/n3bojs4">n3bojs4</a>, <a href="https://github.com/ehlewis">ehlewis</a> and <a href="https://github.com/dkadev">dkadev</a> for <a href="https://github.com/rfc-st/humble/issues/7">this</a> and <a href="https://github.com/rfc-st/humble/pull/16">this</a>.
-* <a href="https://github.com/kazet">kazet</a> for <a href="https://github.com/rfc-st/humble/pull/18">this</a> suggestion.
 * <a href="https://www.linkedin.com/in/jdelamo/">Julio</a> for testing on macOS.
+* <a href="https://github.com/kazet">kazet</a> for <a href="https://github.com/rfc-st/humble/pull/18">this</a> suggestion.
+* <a href="https://github.com/manuel-sommer">manuel-sommer</a> for <a href="https://github.com/rfc-st/humble/issues/8">this</a>, <a href="https://github.com/rfc-st/humble/issues/10">this</a> and <a href="https://github.com/rfc-st/humble/issues/13">this</a>!.
+* <a href="https://github.com/n3bojs4">n3bojs4</a>, <a href="https://github.com/ehlewis">ehlewis</a> and <a href="https://github.com/dkadev">dkadev</a> for <a href="https://github.com/rfc-st/humble/issues/7">this</a> and <a href="https://github.com/rfc-st/humble/pull/16">this</a>.
+* <a href="https://www.kali.org/about-us/">sophie</a> for keeping this tool updated in Kali Linux.
+* <a href="https://github.com/stanley101music">stanley101music</a> for <a href="https://github.com/rfc-st/humble/issues/14">this</a>, <a href="https://github.com/rfc-st/humble/issues/15">this</a> and <a href="https://github.com/rfc-st/humble/issues/17">this</a>!.
 
 ## License
 

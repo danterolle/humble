@@ -40,7 +40,6 @@
 # Standard Library imports
 from time import time
 from json import dumps
-from shlex import quote
 from shutil import copyfile
 from platform import system
 from itertools import islice
@@ -110,7 +109,7 @@ tps://github.com/rfc-st/humble')
 URL_STRING = ('rfc-st', ' URL  : ', 'caniuse')
 
 current_time = datetime.now().strftime("%Y/%m/%d - %H:%M:%S")
-local_version = datetime.strptime('2024-08-31', '%Y-%m-%d').date()
+local_version = datetime.strptime('2024-09-07', '%Y-%m-%d').date()
 
 # Returns the absolute path to the directory where the script is located, 
 # making the paths independent of the current directory from which the 
@@ -139,7 +138,7 @@ def check_python_version():
         else None
 
 
-def check_humble_updates(local_version):
+def check_updates(local_version):
     try:
         github_repo = requests.get(URL_LIST[3], timeout=10).text
         github_date = re.search(RE_PATTERN[4], github_repo).group()
@@ -262,7 +261,7 @@ def testssl_command(testssl_temp_path, uri):
     if not path.isfile(testssl_final_path):
         print_error_detail('[notestssl_file]')
     else:
-        testssl_command = [testssl_final_path] + TESTSSL_OPTIONS + [quote(uri)]
+        testssl_command = [testssl_final_path] + TESTSSL_OPTIONS + [uri]
         testssl_analysis(testssl_command)
     sys.exit()
 
@@ -705,7 +704,7 @@ def print_basic_info(export_filename):
     print(f'{URL_STRING[1]}{URL}')
     if export_filename:
         print_detail_l('[export_filename]')
-        print(f"'{export_filename}'")
+        print(f"{export_filename}")
 
 
 def print_extended_info(args, reliable, status_code):
@@ -1192,21 +1191,21 @@ def format_html_bold(ln):
     html_final.write(f'<strong>{ln}</strong><br>')
 
 
-def print_http_exception(id_exception, exception_v):
+def print_http_exception(exception_id, exception_v):
     delete_lines()
     print("")
-    print_detail(id_exception)
+    print_detail(exception_id)
     raise SystemExit from exception_v
 
 
-def print_ru_message():
+def check_ru_scope():
     with contextlib.suppress(requests.exceptions.RequestException):
         requests.packages.urllib3.disable_warnings()
         sffx = tldextract.extract(URL).suffix[-2:].upper()
         cnty = requests.get(RU_CHECKS[0], verify=False, timeout=5).text.strip()
         if (sffx == RU_CHECKS[1] and sffx not in NON_RU_TLD) or cnty == \
                 RU_CHECKS[2]:
-            print_detail('[ru_analysis_message]', 3)
+            print_detail('[ru_check]', 3)
             sys.exit()
 
 
@@ -1256,7 +1255,7 @@ def make_http_request():
         # chosen to disable these checks so that in certain cases (e.g.
         # development environments, hosts with very old servers/software,
         # self-signed certificates, etc) the URL can still be analyzed.
-        r = session.get(quote(URL), allow_redirects=not args.redirects,
+        r = session.get(URL, allow_redirects=not args.redirects,
                         verify=False, headers=ua_header, timeout=15)
         return r, None, None
     except requests.exceptions.SSLError:
@@ -1265,9 +1264,20 @@ def make_http_request():
         return None, None, e
 
 
+# Five seconds should be enough time to receive the HTTP response headers.
 def wait_http_request(future):
     with contextlib.suppress(concurrent.futures.TimeoutError):
         future.result(timeout=5)
+
+
+def manage_http_exception(exception):
+    exception_type = type(exception)
+    if exception_type in exception_d:
+        exception_id = exception_d[exception_type]
+        print_http_exception(exception_id, exception)
+    else:
+        print_detail_l('[unhandled_exception]')
+        print(f" {exception_type}")
 
 
 def handle_http_exception(r, exception_d):
@@ -1299,12 +1309,7 @@ def manage_http_request():
                 reliable = 'No'
             r, _, exception = future.result()
             if exception:
-                exception_type = type(exception)
-                if exception_type in exception_d:
-                    error_string = exception_d[exception_type]
-                    print_http_exception(error_string, exception)
-                else:
-                    print(f"Unhandled exception type: {exception_type}")
+                manage_http_exception(exception)
                 return headers, status_c, reliable
             handle_http_exception(r, exception_d)
             if r is not None:
@@ -1377,13 +1382,9 @@ l10n_content = get_l10n_content()
 check_python_version()
 
 # Functionality for argparse parameters/values
-check_humble_updates(local_version) if args.version else None
-
-if '-grd' in sys.argv:
-    print_grades_guide(args)
-
-if '-lic' in sys.argv:
-    print_license(args)
+check_updates(local_version) if '-v' in sys.argv else None
+print_grades_guide(args) if '-grd' in sys.argv else None
+print_license(args) if '-lic' in sys.argv else None
 
 if '-f' in sys.argv:
     fng_statistics_term(args.fingerprint_term) if args.fingerprint_term else \
@@ -1439,21 +1440,28 @@ if args.guides or args.testssl_path or args.URL_A:
         url_analytics() if args.URL else url_analytics(is_global=True)
 
 start = time()
-print_ru_message()
+# My reasons for this check:
+# https://github.com/rfc-st/humble/blob/master/CODE_OF_CONDUCT.md#update-20220326
+check_ru_scope()
 
 if not args.URL_A:
     detail = '[analysis_output]' if args.output else '[analysis]'
     print("")
     print_detail(detail)
 
-# Retrieving HTTP response headers
+# Retrieving HTTP response headers and managing exceptions
 exception_d = {
-    requests.exceptions.ConnectionError: '[e_404]',
-    requests.exceptions.InvalidSchema: '[e_schema]',
-    requests.exceptions.InvalidURL: '[e_invalid]',
-    requests.exceptions.MissingSchema: '[e_schema]',
+    requests.exceptions.ChunkedEncodingError: '[e_chunk]',
+    requests.exceptions.ConnectionError: '[e_connection]',
+    requests.exceptions.ConnectTimeout: '[e_ctimeout]',
+    requests.exceptions.ContentDecodingError: '[e_decoding]',
+    requests.exceptions.InvalidSchema: '[e_ischema]',
+    requests.exceptions.InvalidURL: '[e_url]',
+    requests.exceptions.MissingSchema: '[e_mschema]',
+    requests.exceptions.ReadTimeout: '[e_rtimeout]',
     requests.exceptions.SSLError: None,
     requests.exceptions.Timeout: '[e_timeout]',
+    requests.exceptions.TooManyRedirects: '[e_redirect]',
 }
 requests.packages.urllib3.disable_warnings()
 
@@ -2157,6 +2165,7 @@ print("") if e_cnt != 0 else print_nowarnings()
 print("")
 
 # Section '5. Browser Compatibility for Enabled HTTP Security Headers'
+# Provided by https://caniuse.com/
 print_detail_r('[5compat]')
 
 t_sec = ('Access-Control-Allow-Credentials', 'Access-Control-Allow-Methods',
@@ -2181,7 +2190,7 @@ else:
     print_detail_l("[no_sec_headers]") if args.output else \
         print_detail_r("[no_sec_headers]", is_red=True)
 
-# Printing analysis summary and the changes with respect to the previous one
+# Analysis summary and changes with respect to the previous one
 print(linesep.join(['']*2))
 end = time()
 get_analysis_results()
